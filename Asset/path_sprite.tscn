@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://dg8cbxhtcumgb"]
+[gd_scene load_steps=3 format=3 uid="uid://dg8cbxhtcumgb"]
+
+[ext_resource type="Texture2D" uid="uid://b7ugfp88mtuab" path="res://Texture/fourmi.png" id="1_cl5bs"]
 
 [sub_resource type="Curve2D" id="Curve2D_gqtld"]
 
@@ -8,3 +10,6 @@ curve = SubResource("Curve2D_gqtld")
 [node name="PathFollow2D" type="PathFollow2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="PathFollow2D"]
+position = Vector2(0.749999, 2.25)
+scale = Vector2(1.06522, 1.19565)
+texture = ExtResource("1_cl5bs")
