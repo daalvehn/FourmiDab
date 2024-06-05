@@ -1,3 +1,11 @@
-[gd_scene format=3 uid="uid://csbeac3m388wf"]
+[gd_scene load_steps=3 format=3 uid="uid://csbeac3m388wf"]
+
+[ext_resource type="PackedScene" uid="uid://dmps6f51enln7" path="res://Asset/ground.tscn" id="1_h44tk"]
+[ext_resource type="PackedScene" uid="uid://dg8cbxhtcumgb" path="res://Asset/fourmi.tscn" id="2_7nh4d"]
 
 [node name="LaunchScene" type="Node2D"]
+
+[node name="Ground" parent="." instance=ExtResource("1_h44tk")]
+
+[node name="Fourmi" parent="Ground" instance=ExtResource("2_7nh4d")]
+position = Vector2(513, 326)

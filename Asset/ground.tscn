@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dmps6f51enln7"]
+
+[ext_resource type="Texture2D" uid="uid://dopiodoxkisfx" path="res://Texture/Ground_texture.png" id="1_svrcm"]
+
+[node name="Ground" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(541, 332)
+scale = Vector2(9.8, 6.2)
+texture = ExtResource("1_svrcm")
