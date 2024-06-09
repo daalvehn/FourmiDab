@@ -7,5 +7,5 @@
 
 [node name="Ground" parent="." instance=ExtResource("1_h44tk")]
 
-[node name="Fourmi" parent="Ground" instance=ExtResource("2_7nh4d")]
-position = Vector2(513, 326)
+[node name="Fourmi" parent="." instance=ExtResource("2_7nh4d")]
+position = Vector2(958, 567)
