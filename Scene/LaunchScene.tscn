@@ -1,11 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://csbeac3m388wf"]
+[gd_scene load_steps=5 format=3 uid="uid://csbeac3m388wf"]
 
+[ext_resource type="Script" path="res://Script/LaunchScene.gd" id="1_gwv1m"]
 [ext_resource type="PackedScene" uid="uid://dmps6f51enln7" path="res://Asset/ground.tscn" id="1_h44tk"]
 [ext_resource type="PackedScene" uid="uid://dg8cbxhtcumgb" path="res://Asset/fourmi.tscn" id="2_7nh4d"]
+[ext_resource type="AudioStream" uid="uid://c6arq3nnqbhw2" path="res://Music/Menu-Music.wav" id="3_wgo26"]
 
 [node name="LaunchScene" type="Node2D"]
+script = ExtResource("1_gwv1m")
 
 [node name="Ground" parent="." instance=ExtResource("1_h44tk")]
 
 [node name="Fourmi" parent="." instance=ExtResource("2_7nh4d")]
 position = Vector2(958, 567)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_wgo26")
+volume_db = -6.559
