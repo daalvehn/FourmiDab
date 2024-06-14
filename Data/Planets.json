@@ -1,0 +1,25 @@
+{
+	"PlanetCandy":{
+					"sprite_path" : "res://Textures/PlanetCandy.png",
+					"attract" : true,
+					"force" : 3.0,
+					"rotation_speed" : 2, 
+					"size" : 3
+					},
+					
+	"PlanetLemon":{
+					"sprite_path" : "res://Textures/PlanetLemon.png",
+					"attract" : false,
+					"force" : 2.0,
+					"rotation_speed" : 3, 
+					"size" : 2
+					},
+					
+	"Marmelanete":{
+					"sprite_path" : "res://Textures/Marmelanete.png",
+					"attract" : true,
+					"force" : 5.0,
+					"rotation_speed" : 1, 
+					"size" : 5
+					}
+}
