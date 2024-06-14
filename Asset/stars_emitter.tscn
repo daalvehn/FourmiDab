@@ -1,11 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://bnke4lqc6wh5f"]
+[gd_scene load_steps=3 format=3 uid="uid://bhgf0c1v04wgr"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_rf5x3"]
 blend_mode = 1
 
 [sub_resource type="Gradient" id="Gradient_d6ivi"]
-offsets = PackedFloat32Array(0, 0.51087, 1)
-colors = PackedColorArray(0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1)
+offsets = PackedFloat32Array(0.456522, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
 
 [node name="StarsEmitter" type="Node2D"]
 
@@ -24,8 +24,8 @@ color_ramp = SubResource("Gradient_d6ivi")
 
 [node name="Burst" type="CPUParticles2D" parent="."]
 material = SubResource("CanvasItemMaterial_rf5x3")
-amount = 300
-lifetime = 10.0
+amount = 200
+lifetime = 12.0
 one_shot = true
 explosiveness = 1.0
 emission_shape = 3
