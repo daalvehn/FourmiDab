@@ -11,7 +11,7 @@
 					"sprite_path" : "res://Texture/PlanetLemon.png",
 					"attract" : false,
 					"force" : 2.0,
-					"rotation_speed" : 4, 
+					"rotation_speed" : 3, 
 					"size" : 1
 					},
 					
@@ -19,7 +19,7 @@
 					"sprite_path" : "res://Texture/Marmelanete.png",
 					"attract" : true,
 					"force" : 5.0,
-					"rotation_speed" : 0.8, 
+					"rotation_speed" : 1, 
 					"size" : 4
 					},
 					
@@ -27,7 +27,7 @@
 					"sprite_path" : "res://Texture/PlanetBlackhole.png",
 					"attract" : true,
 					"force" : 8.0,
-					"rotation_speed" : -0.1, 
+					"rotation_speed" : 0.1, 
 					"size" : 3
 				},
 				
@@ -35,17 +35,7 @@
 					"sprite_path" : "res://Texture/PlanetPink.png",
 					"attract" : true,
 					"force" : 3.0,
-					"rotation_speed" : 2.5, 
+					"rotation_speed" : 2, 
 					"size" : 2
-				},
-				
-	"Asteroid":{
-					"sprite_path" : "res://Texture/PlanetAsteroid.png",
-					"attract" : false,
-					"force" : 0,
-					"rotation_speed" : 0, 
-					"size" : 4.5
 				}
-				
-				
 }

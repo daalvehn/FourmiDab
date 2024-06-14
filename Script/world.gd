@@ -24,30 +24,39 @@ func check_input():
 
 	if Input.is_action_just_pressed("add_marmelanete"):
 		adding_planet(mouse_pos,"Marmelanete")
+		
+	if Input.is_action_just_pressed("add_BlackHole"):
+		adding_planet(mouse_pos,"BlackHole")
+		
+	if Input.is_action_just_pressed("add_PlanetPink"):
+		adding_planet(mouse_pos,"PlanetPink")
+		
+	if Input.is_action_just_pressed("add_Asteroid"):
+		adding_planet(mouse_pos,"Asteroid")
 
-	if Input.is_action_just_pressed("increase_speed"):
-		if not planet_list.is_empty() :
-			for planet in planet_list:
-				planet.set_rotation_speed(planet.get_rotation_speed() + 1)
-
-	if Input.is_action_just_pressed("decrease_speed"):
-		if not planet_list.is_empty() :
-			for planet in planet_list:
-				planet.set_rotation_speed(planet.get_rotation_speed() - 1)
-	
-	if Input.is_action_just_pressed("increase_size"):
-		if not planet_list.is_empty() :
-			# check at mouse_pos if planet
-			# if yes, get id
-			# from list and id, change scale
-			pass
-
-	if Input.is_action_just_pressed("decrease_size"):
-		if not planet_list.is_empty() :
-			# check at mouse_pos if planet
-			# if yes, get id
-			# from list and id, change scale
-			pass
+	#if Input.is_action_just_pressed("increase_speed"):
+		#if not planet_list.is_empty() :
+			#for planet in planet_list:
+				#planet.set_rotation_speed(planet.get_rotation_speed() + 1)
+#
+	#if Input.is_action_just_pressed("decrease_speed"):
+		#if not planet_list.is_empty() :
+			#for planet in planet_list:
+				#planet.set_rotation_speed(planet.get_rotation_speed() - 1)
+	#
+	#if Input.is_action_just_pressed("increase_size"):
+		#if not planet_list.is_empty() :
+			## check at mouse_pos if planet
+			## if yes, get id
+			## from list and id, change scale
+			#pass
+#
+	#if Input.is_action_just_pressed("decrease_size"):
+		#if not planet_list.is_empty() :
+			## check at mouse_pos if planet
+			## if yes, get id
+			## from list and id, change scale
+			#pass
 
 # Function to rotate every planet
 func rotate_planets(delta):
@@ -60,8 +69,9 @@ func rotate_planets(delta):
 # Function to add a planet
 func adding_planet(planet_position,planet_type):
 	#load json
-	var file = FileAccess.open("res://Datas/Planets.json", FileAccess.READ)
+	var file = FileAccess.open("res://Data/Planets.json", FileAccess.READ)
 	var data_dict = JSON.parse_string(file.get_as_text())
+	print(planet_type)
 	var planet_info = data_dict[planet_type]
 	#print(typeof(data)) # ENUM Variant, 27 = dictionnary
 	#print("planet info : ", planet_info)
