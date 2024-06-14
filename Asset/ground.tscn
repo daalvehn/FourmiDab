@@ -5,6 +5,5 @@
 [node name="Ground" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(12, 12)
 texture = ExtResource("1_7byq3")
 centered = false

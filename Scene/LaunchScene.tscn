@@ -1,22 +1,26 @@
-[gd_scene load_steps=6 format=3 uid="uid://csbeac3m388wf"]
+[gd_scene load_steps=7 format=3 uid="uid://csbeac3m388wf"]
 
 [ext_resource type="Script" path="res://Script/LaunchScene.gd" id="1_gwv1m"]
 [ext_resource type="PackedScene" uid="uid://dmps6f51enln7" path="res://Asset/ground.tscn" id="1_h44tk"]
 [ext_resource type="PackedScene" uid="uid://dg8cbxhtcumgb" path="res://Asset/fourmi.tscn" id="2_7nh4d"]
 [ext_resource type="PackedScene" uid="uid://dgmjobw1a4ygn" path="res://Asset/candy_planet.tscn" id="5_47cdj"]
 [ext_resource type="PackedScene" uid="uid://bu0aqoneej781" path="res://Asset/citrus_planet.tscn" id="6_8e7qn"]
+[ext_resource type="PackedScene" uid="uid://bljreyqk520e2" path="res://Asset/marmelanète.tscn" id="6_hv7yo"]
 
 [node name="LaunchScene" type="Node2D"]
 script = ExtResource("1_gwv1m")
 
 [node name="Ground" parent="." instance=ExtResource("1_h44tk")]
-position = Vector2(19, 0)
+position = Vector2(3, 0)
 
 [node name="Fourmi" parent="." instance=ExtResource("2_7nh4d")]
-position = Vector2(974, 634)
+position = Vector2(878, 634)
 
 [node name="CandyPlanet" parent="." instance=ExtResource("5_47cdj")]
-position = Vector2(1042, 391)
+position = Vector2(1052, 436)
 
 [node name="CitrusPlanet" parent="." instance=ExtResource("6_8e7qn")]
-position = Vector2(853, 498)
+position = Vector2(821, 332)
+
+[node name="Marmelanète" parent="." instance=ExtResource("6_hv7yo")]
+position = Vector2(927, 121)
