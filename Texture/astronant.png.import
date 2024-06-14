@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7ugfp88mtuab"
-path="res://.godot/imported/fourmi.png-01e4a0424fac8fbad1e2eb3efc7b6fdb.ctex"
+uid="uid://cuuud14es0bdt"
+path="res://.godot/imported/astronant.png-39c114699545a4ebbab3d6cd36fc9bfb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Texture/fourmi.png"
-dest_files=["res://.godot/imported/fourmi.png-01e4a0424fac8fbad1e2eb3efc7b6fdb.ctex"]
+source_file="res://Texture/astronant.png"
+dest_files=["res://.godot/imported/astronant.png-39c114699545a4ebbab3d6cd36fc9bfb.ctex"]
 
 [params]
 
