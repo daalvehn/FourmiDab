@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://xdbu1ntd1e35"]
+
+[ext_resource type="Script" path="res://Script/PathDebris.gd" id="1_0eew6"]
+[ext_resource type="Texture2D" uid="uid://b8xh3ev208eqr" path="res://Texture/RubberDuck_Yellow.png" id="1_0ipvq"]
+[ext_resource type="Script" path="res://Script/rotateSprite.gd" id="3_37no5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wtf4f"]
+radius = 10.1264
+
+[node name="Debris" type="PathFollow2D"]
+rotates = false
+script = ExtResource("1_0eew6")
+periodInSecond = 10.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_0ipvq")
+script = ExtResource("3_37no5")
+period = 1
+metadata/_edit_pinned_properties_ = [&"period"]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(1.974, 1.974)
+shape = SubResource("CircleShape2D_wtf4f")
