@@ -6,6 +6,9 @@ var id = null
 var rotation_speed = 0
 var size = 1
 var sprite_path = ""
+var mouse_in_area = false
+
+signal planet_in_zone_is_clicked
 
 func _ready():
 	pass
@@ -51,4 +54,17 @@ func get_sprite_path():
 
 func set_sprite_path(new_sprite_path):
 	self.sprite_path = new_sprite_path
-	self.get_node("Sprite2D").texture = load(self.sprite_path)	
+	self.get_node("Sprite2D").texture = load(self.sprite_path)
+
+func _on_planet_area_mouse_entered():
+	mouse_in_area = true
+
+
+func _on_planet_area_mouse_exited():
+	mouse_in_area = false
+
+
+func _on_planet_area_input_event(viewport, event, shape_idx):
+	if mouse_in_area and event.is_pressed() and event.button_index == MOUSE_BUTTON_RIGHT:
+		print(self.name)
+		planet_in_zone_is_clicked.emit()
