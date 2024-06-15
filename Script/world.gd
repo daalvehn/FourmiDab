@@ -15,24 +15,15 @@ func _process(delta):
 # Function to check input
 func check_input():
 	var mouse_pos = get_global_mouse_position()
-	
-	if Input.is_action_just_pressed("add_candy"):
-		adding_planet(mouse_pos,"PlanetCandy")
-
-	if Input.is_action_just_pressed("add_lemon"):
-		adding_planet(mouse_pos,"PlanetLemon")
-
-	if Input.is_action_just_pressed("add_marmelanete"):
-		adding_planet(mouse_pos,"Marmelanete")
 		
-	if Input.is_action_just_pressed("add_BlackHole"):
-		adding_planet(mouse_pos,"BlackHole")
-		
-	if Input.is_action_just_pressed("add_PlanetPink"):
-		adding_planet(mouse_pos,"PlanetPink")
-		
-	if Input.is_action_just_pressed("add_Asteroid"):
-		adding_planet(mouse_pos,"Asteroid")
+	if Input.is_action_just_pressed("left_click"):
+		pass
+	if Input.is_action_just_pressed("right_click"):
+		pass
+	if Input.is_action_just_pressed("slot_1"):
+		pass
+	if Input.is_action_just_pressed("slot_2"):
+		pass
 
 	#if Input.is_action_just_pressed("increase_speed"):
 		#if not planet_list.is_empty() :

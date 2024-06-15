@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=3 uid="uid://fhtirnvwowsx"]
+
+[ext_resource type="Script" path="res://Script/ui_level.gd" id="1_eoked"]
+[ext_resource type="PackedScene" uid="uid://8rrnc0asgfns" path="res://Asset/ui_window.tscn" id="2_sgsil"]
+[ext_resource type="Texture2D" uid="uid://dlvqyqfsivapn" path="res://Texture/PlanetCandy.png" id="3_2mnjv"]
+[ext_resource type="Texture2D" uid="uid://5iiakwc8ekj7" path="res://Texture/PlanetLemon.png" id="4_3xtyp"]
+[ext_resource type="Texture2D" uid="uid://il0p77hm3rr3" path="res://Texture/PlanetPink.png" id="5_adrq5"]
+
+[node name="Ui_level" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_eoked")
+
+[node name="MenuBar" type="MenuBar" parent="."]
+layout_mode = 0
+offset_top = 903.0
+offset_right = 40.0
+offset_bottom = 937.0
+scale = Vector2(47.9694, 3.75414)
+
+[node name="Ui_window" parent="MenuBar" instance=ExtResource("2_sgsil")]
+position = Vector2(14.3842, 17.0478)
+scale = Vector2(0.0769124, 0.914761)
+
+[node name="Sprite2D2" type="Sprite2D" parent="MenuBar/Ui_window"]
+position = Vector2(-7.39098e-06, -0.291202)
+rotation = 0.785398
+scale = Vector2(0.49577, 0.540938)
+texture = ExtResource("3_2mnjv")
+
+[node name="Ui_window2" parent="MenuBar" instance=ExtResource("2_sgsil")]
+position = Vector2(17.4486, 17.0478)
+scale = Vector2(0.077, 0.915)
+
+[node name="Sprite2D2" type="Sprite2D" parent="MenuBar/Ui_window2"]
+position = Vector2(5.84126e-06, -6.55651e-06)
+scale = Vector2(0.49577, 0.540938)
+texture = ExtResource("4_3xtyp")
+
+[node name="Ui_window3" parent="MenuBar" instance=ExtResource("2_sgsil")]
+position = Vector2(20.5131, 17.0478)
+scale = Vector2(0.077, 0.915)
+
+[node name="Sprite2D2" type="Sprite2D" parent="MenuBar/Ui_window3"]
+scale = Vector2(0.49577, 0.540938)
+texture = ExtResource("5_adrq5")
+
+[node name="Ui_window4" parent="MenuBar" instance=ExtResource("2_sgsil")]
+position = Vector2(23.5984, 17.0478)
+scale = Vector2(0.077, 0.915)

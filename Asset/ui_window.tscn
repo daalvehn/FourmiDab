@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://8rrnc0asgfns"]
+
+[ext_resource type="Script" path="res://Script/ui_window.gd" id="1_h8nve"]
+[ext_resource type="Texture2D" uid="uid://btcbno0fsx50e" path="res://Texture/ui_slot-40x40.png" id="1_lxafl"]
+
+[node name="Ui_window" type="Node2D" groups=["ui_level_window"]]
+script = ExtResource("1_h8nve")
+
+[node name="Button" type="Button" parent="."]
+offset_left = -18.0
+offset_top = -19.0
+offset_right = 18.0
+offset_bottom = 19.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_lxafl")
+hframes = 2
+
+[connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Button" to="." method="_on_button_mouse_exited"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

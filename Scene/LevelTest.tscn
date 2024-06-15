@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dgmjobw1a4ygn" path="res://Asset/candy_planet.tscn" id="4_n0wjj"]
 [ext_resource type="PackedScene" uid="uid://bu0aqoneej781" path="res://Asset/citrus_planet.tscn" id="5_14bkt"]
 [ext_resource type="PackedScene" uid="uid://bljreyqk520e2" path="res://Asset/marmelanete.tscn" id="6_587yl"]
-[ext_resource type="PackedScene" uid="uid://bhgf0c1v04wgr" path="res://Asset/stars_emitter.tscn" id="7_p6egn"]
+[ext_resource type="PackedScene" uid="uid://bnke4lqc6wh5f" path="res://Asset/stars_emitter.tscn" id="7_p6egn"]
 [ext_resource type="PackedScene" uid="uid://cfiwkn58hch6s" path="res://Asset/black_hole.tscn" id="8_50dif"]
 
 [node name="LevelTest" type="Node2D"]
