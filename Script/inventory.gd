@@ -12,10 +12,15 @@ var inventory = {
 var selected_slot = "slot1"
 
 func _ready():
-	pass
+	get_inventory_from_json("Level_1")
 
 func _process(_delta):
 	pass
+	
+func get_inventory_from_json(level):
+	var inventory_file = FileAccess.open("res://Data/Starting_Inventory.json", FileAccess.READ)
+	var data_dict = JSON.parse_string(inventory_file.get_as_text())
+	var inventory_info = data_dict[level]
 
 # From inventory to world
 func use_planet():
