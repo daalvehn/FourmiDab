@@ -1,7 +1,8 @@
-extends Control
+extends Area2D
 
-signal slot_1_pressed
-signal slot_2_pressed
+@export var slot_1_is_clicked = false
+@export var slot_2_is_clicked = false
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -11,11 +12,3 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
-
-
-func _on_slot_1_pressed():
-	slot_1_pressed.emit()
-
-
-func _on_slot_2_pressed():
-	slot_2_pressed.emit()

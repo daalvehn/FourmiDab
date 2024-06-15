@@ -14,10 +14,10 @@ extends Node2D
 					#"PlanetLemon" : 0}
 
 var inventory = {
-					"slot1":{"PlanetCandy" : 0},
-					"slot2":{"PlanetLemon" : 0}}	
+					"slot_1":{"PlanetCandy" : 0},
+					"slot_2":{"PlanetLemon" : 0}}	
 
-var selected_slot = "slot1"
+var selected_slot = "slot_1"
 
 func _ready():
 	load_starting_inventory("Level_1")
@@ -32,8 +32,8 @@ func load_starting_inventory(level):
 	var inventory_info = data_dict[level]
 		
 	# extract info & apply to inventory
-	inventory["slot1"]["PlanetCandy"] = inventory_info["PlanetCandy"]
-	inventory["slot2"]["PlanetLemon"] = inventory_info["PlanetLemon"]	
+	inventory["slot_1"]["PlanetCandy"] = inventory_info["PlanetCandy"]
+	inventory["slot_2"]["PlanetLemon"] = inventory_info["PlanetLemon"]	
 
 # From inventory to world
 func use_planet():

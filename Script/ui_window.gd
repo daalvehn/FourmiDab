@@ -1,4 +1,4 @@
-extends Node2D
+extends Button
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -16,7 +16,3 @@ func _on_button_mouse_entered():
 
 func _on_button_mouse_exited():
 	$Sprite2D.frame = 0
-
-
-func _on_button_pressed():
-	print("POUET")
