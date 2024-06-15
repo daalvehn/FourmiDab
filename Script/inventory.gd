@@ -1,21 +1,9 @@
 extends Node2D
 
 # extend with other slot if needed
-#var inventory = {
-					#"slot1":{
-								#"planet_type":"PlanetCandy",
-								#"quantity":0},
-					#"slot2":{
-								#"planet_type":"PlanetLemon",
-								#"quantity":0}} 
-#
 var inventory = {
 					"PlanetCandy" : 0,
 					"PlanetLemon" : 0}
-
-#var inventory = {
-					#"slot_1":{"PlanetCandy" : 0},
-					#"slot_2":{"PlanetLemon" : 0}}	
 
 func _ready():
 	load_starting_inventory("Level_1")
@@ -32,15 +20,3 @@ func load_starting_inventory(level):
 	# extract info & apply to inventory
 	inventory["PlanetCandy"] = inventory_info["PlanetCandy"]
 	inventory["PlanetLemon"] = inventory_info["PlanetLemon"]	
-
-# From inventory to world
-func use_planet():
-	# remove from inventory
-	# add to world list
-	pass
-	
-# From world to inventory
-func pick_planet():
-	# remove from world list
-	# add to inventory
-	pass

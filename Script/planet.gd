@@ -1,6 +1,7 @@
 extends StaticBody2D
 
 var attract = false
+var collision_shape_size = 0
 var force = 1
 var id = null
 var rotation_speed = 0
@@ -8,7 +9,9 @@ var size = 1
 var sprite_path = ""
 var mouse_in_area = false
 
-signal planet_in_zone_is_clicked
+var type = ""
+
+signal planet_right_clicked
 
 func _ready():
 	pass
@@ -28,6 +31,17 @@ func get_force():
 func set_force(new_force):
 	self.force = new_force
 
+# collision shape size a tweak (dans le JSON)
+func set_collision_shape_size(new_collision_shape_size):
+	self.collision_shape_size = new_collision_shape_size
+	$CollisionShape1.scale.x = self.collision_shape_size * self.size
+	$CollisionShape1.scale.y = self.collision_shape_size * self.size
+	$PlanetArea/CollisionShape2.scale.x = self.collision_shape_size * self.size
+	$PlanetArea/CollisionShape2.scale.y = self.collision_shape_size * self.size
+	
+func get_collision_shape_size():
+	return self.collision_shape_size
+	
 func set_id(new_id):
 	self.id = new_id
 
@@ -47,7 +61,6 @@ func set_size(new_size):
 	self.size = new_size
 	self.scale.x = self.size
 	self.scale.y = self.size
-	# adapt collision shape with size (shape circle)
 
 func get_sprite_path():
 	return self.sprite_path
@@ -59,12 +72,9 @@ func set_sprite_path(new_sprite_path):
 func _on_planet_area_mouse_entered():
 	mouse_in_area = true
 
-
 func _on_planet_area_mouse_exited():
 	mouse_in_area = false
 
-
-func _on_planet_area_input_event(viewport, event, shape_idx):
+func _on_planet_area_input_event(_viewport, event, _shape_idx):
 	if mouse_in_area and event.is_pressed() and event.button_index == MOUSE_BUTTON_RIGHT:
-		print(self.name)
-		planet_in_zone_is_clicked.emit()
+		planet_right_clicked.emit(self.id)

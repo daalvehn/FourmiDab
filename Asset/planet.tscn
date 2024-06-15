@@ -9,14 +9,14 @@
 [node name="Planet" type="StaticBody2D"]
 script = ExtResource("1_snckh")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape1" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_vlp2e")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 
 [node name="PlanetArea" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PlanetArea"]
+[node name="CollisionShape2" type="CollisionShape2D" parent="PlanetArea"]
 shape = SubResource("CircleShape2D_2fjha")
 
 [connection signal="input_event" from="PlanetArea" to="." method="_on_planet_area_input_event"]
