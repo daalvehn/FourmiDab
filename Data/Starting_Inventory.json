@@ -1,0 +1,10 @@
+{
+	"Level_1":{
+					"PlanetCandy" : 1,
+					"PlanetLemon" : 1
+					},
+	"Level_2":{
+					"PlanetCandy" : 2,
+					"PlanetLemon" : 2
+					}
+}
