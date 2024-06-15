@@ -8,6 +8,7 @@ var rotation_speed = 0
 var size = 1
 var sprite_path = ""
 var mouse_in_area = false
+signal mouse_in
 
 var type = ""
 
@@ -71,9 +72,11 @@ func set_sprite_path(new_sprite_path):
 
 func _on_planet_area_mouse_entered():
 	mouse_in_area = true
+	mouse_in.emit(true)
 
 func _on_planet_area_mouse_exited():
 	mouse_in_area = false
+	mouse_in.emit(false)
 
 func _on_planet_area_input_event(_viewport, event, _shape_idx):
 	if mouse_in_area and event.is_pressed() and event.button_index == MOUSE_BUTTON_RIGHT:

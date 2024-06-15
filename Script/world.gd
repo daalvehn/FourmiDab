@@ -5,9 +5,11 @@ var planet_list = []
 var index = 0
 var planet_selected_info = null
 var planet_name_selected
+var is_colliding_planet = false
 
 func _ready():
-	pass
+	$Ui_level.get_child(0).get_child(0).get_child(2).text = str($Inventory.inventory["PlanetCandy"])
+	$Ui_level.get_child(0).get_child(1).get_child(2).text = str($Inventory.inventory["PlanetLemon"])
 
 func _process(delta):
 	
@@ -17,7 +19,7 @@ func _process(delta):
 # Function to check input
 func check_input():
 	var mouse_pos = get_global_mouse_position()
-	if Input.is_action_just_pressed("left_click") and planet_selected_info != null:
+	if Input.is_action_just_pressed("left_click") and planet_selected_info != null and !is_colliding_planet:
 		if $GamingZone.mouse_in_area == true:
 			if $Inventory.inventory[planet_name_selected] > 0:
 				_on_gaming_zone_player_click_in_gaming_zone(mouse_pos)
@@ -40,6 +42,10 @@ func remove_planet(planet_id):
 	
 	# Add back to inventory
 	$Inventory.inventory[planet_list[planet_id].type] += 1
+	if planet_list[planet_id].type == "PlanetCandy":
+		$Ui_level.get_child(0).get_child(0).get_child(2).text = str($Inventory.inventory[planet_list[planet_id].type])
+	else:
+		$Ui_level.get_child(0).get_child(1).get_child(2).text = str($Inventory.inventory[planet_list[planet_id].type])
 
 	# removing planet from list
 	planet_list.remove_at(planet_id)
@@ -51,6 +57,7 @@ func remove_planet(planet_id):
 	for planet in planet_list:
 		if(planet.id > planet_id):
 			planet.id -= 1
+	is_colliding_planet = false
 
 # Function to rotate every planet
 func rotate_planets(delta):
@@ -87,6 +94,10 @@ func adding_planet(planet_position, planet_name):
 	
 	# connect signal to world
 	planet.planet_right_clicked.connect(_on_planet_right_clicked)
+	planet.mouse_in.connect(update_collide)
+	
+func update_collide(state):
+	is_colliding_planet = state
 
 func _on_ui_level_slot_1_pressed():
 	var file = FileAccess.open("res://Data/Planets.json", FileAccess.READ)
@@ -99,6 +110,10 @@ func _on_ui_level_slot_1_pressed():
 func _on_gaming_zone_player_click_in_gaming_zone(planet_position):
 	adding_planet(planet_position, planet_name_selected)
 	$Inventory.inventory[planet_name_selected] -= 1
+	if planet_name_selected == "PlanetLemon":
+		$Ui_level.get_child(0).get_child(1).get_child(2).text = str($Inventory.inventory[planet_name_selected])
+	else:
+		$Ui_level.get_child(0).get_child(0).get_child(2).text = str($Inventory.inventory[planet_name_selected])
 
 func _on_ui_level_slot_2_pressed():
 	var file = FileAccess.open("res://Data/Planets.json", FileAccess.READ)

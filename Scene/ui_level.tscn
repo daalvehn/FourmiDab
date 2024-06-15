@@ -28,9 +28,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 17.0108
+offset_left = 15.0096
 offset_top = 6.39294
-offset_right = 53.0108
+offset_right = 51.0096
 offset_bottom = 44.3929
 grow_horizontal = 1
 grow_vertical = 1
@@ -41,6 +41,18 @@ position = Vector2(19.2441, 19.2188)
 rotation = 0.785398
 scale = Vector2(0.493216, 0.540938)
 texture = ExtResource("3_2mnjv")
+
+[node name="Slot_1_label" type="Label" parent="MenuBar/slot_1"]
+layout_mode = 0
+offset_left = 26.0198
+offset_top = 27.6634
+offset_right = 66.0198
+offset_bottom = 55.6634
+scale = Vector2(0.197712, 0.301138)
+theme_override_colors/font_color = Color(0.823529, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "3"
+horizontal_alignment = 1
 
 [node name="slot_2" parent="MenuBar" instance=ExtResource("2_sgsil")]
 layout_mode = 0
@@ -61,6 +73,18 @@ scale = Vector2(0.077, 0.915)
 position = Vector2(17.8685, 19.2138)
 scale = Vector2(0.49577, 0.540938)
 texture = ExtResource("4_3xtyp")
+
+[node name="Slot_2_label" type="Label" parent="MenuBar/slot_2"]
+layout_mode = 0
+offset_left = 25.7198
+offset_top = 27.9473
+offset_right = 65.7198
+offset_bottom = 55.9473
+scale = Vector2(0.198624, 0.312963)
+theme_override_colors/font_color = Color(0.823529, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "3"
+horizontal_alignment = 1
 
 [connection signal="pressed" from="MenuBar/slot_1" to="." method="_on_slot_1_pressed"]
 [connection signal="pressed" from="MenuBar/slot_2" to="." method="_on_slot_2_pressed"]
