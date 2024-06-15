@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://uj43l33ax3vm"]
+[gd_scene load_steps=10 format=3 uid="uid://uj43l33ax3vm"]
 
 [ext_resource type="PackedScene" uid="uid://dmps6f51enln7" path="res://Asset/ground.tscn" id="1_bjynj"]
 [ext_resource type="Script" path="res://Script/world.gd" id="1_i01pq"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://fhtirnvwowsx" path="res://Scene/ui_level.tscn" id="5_ncora"]
 [ext_resource type="PackedScene" uid="uid://cg5juldybpdc4" path="res://Scene/inventory.tscn" id="6_ty2fk"]
 [ext_resource type="Script" path="res://Script/GamingZone.gd" id="7_nckhs"]
+[ext_resource type="PackedScene" uid="uid://dg8cbxhtcumgb" path="res://Asset/fourmi.tscn" id="8_o5vvi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h0jfd"]
 size = Vector2(1867, 802)
@@ -34,6 +35,10 @@ script = ExtResource("7_nckhs")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GamingZone"]
 position = Vector2(101.5, 131)
 shape = SubResource("RectangleShape2D_h0jfd")
+
+[node name="Fourmi" parent="." instance=ExtResource("8_o5vvi")]
+position = Vector2(913, 41)
+mass = 0.01
 
 [connection signal="slot_1_pressed" from="Ui_level" to="." method="_on_ui_level_slot_1_pressed"]
 [connection signal="slot_2_pressed" from="Ui_level" to="." method="_on_ui_level_slot_2_pressed"]

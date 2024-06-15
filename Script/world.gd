@@ -82,16 +82,19 @@ func adding_planet(planet_position, planet_name):
 	planet.set_size(planet_info["size"])
 	planet.set_collision_shape_size(planet_info["collision_shape_size"])
 	planet.set_sprite_path(planet_info["sprite_path"])	
+	planet.set_attraction_shape_size(planet_info["attraction_shape_size"])
+	planet.set_gravity(planet_info["gravity"])
+	print(planet.gravity)
 	planet.name = "planet" + str(index)
 	planet.type = planet_name
 
 	# add planet to world and list
 	self.add_child(planet)
+	
 	planet_list.append(planet)
 	
 	# update global index
 	index = planet_list.size()
-	
 	# connect signal to world
 	planet.planet_right_clicked.connect(_on_planet_right_clicked)
 	planet.mouse_in.connect(update_collide)

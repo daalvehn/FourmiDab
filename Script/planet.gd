@@ -2,6 +2,8 @@ extends StaticBody2D
 
 var attract = false
 var collision_shape_size = 0
+var attraction_shape_size = 0
+var gravity = 0
 var force = 1
 var id = null
 var rotation_speed = 0
@@ -35,10 +37,15 @@ func set_force(new_force):
 # collision shape size a tweak (dans le JSON)
 func set_collision_shape_size(new_collision_shape_size):
 	self.collision_shape_size = new_collision_shape_size
-	$CollisionShape1.scale.x = self.collision_shape_size * self.size
-	$CollisionShape1.scale.y = self.collision_shape_size * self.size
-	$PlanetArea/CollisionShape2.scale.x = self.collision_shape_size * self.size
-	$PlanetArea/CollisionShape2.scale.y = self.collision_shape_size * self.size
+	$CollisionShape1.shape.radius = self.collision_shape_size
+	
+func set_attraction_shape_size(new_attraction_shape_size):
+	self.attraction_shape_size = new_attraction_shape_size
+	$PlanetArea/CollisionShape2.shape.radius = self.attraction_shape_size
+	
+func set_gravity(new_gravity):
+	self.gravity = new_gravity
+
 	
 func get_collision_shape_size():
 	return self.collision_shape_size

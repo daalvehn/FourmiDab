@@ -4,7 +4,9 @@
 					"attract" : true,
 					"force" : 3.0,
 					"rotation_speed" : 2,
-					"collision_shape_size" : 0.9, 
+					"collision_shape_size" : 21,
+					"attraction_shape_size" : 130,
+					"gravity" : 981,
 					"size" : 2
 					},
 					
@@ -13,8 +15,10 @@
 					"attract" : false,
 					"force" : 2.0,
 					"rotation_speed" : 4, 
-					"collision_shape_size" : 1.0, 
-					"size" : 1
+					"collision_shape_size" : 25,
+					"attraction_shape_size" : 130, 
+					"gravity" : -981,
+					"size" : 2
 					},
 					
 	"Marmelanete":{
