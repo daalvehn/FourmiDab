@@ -10,7 +10,7 @@ var sprite_path = ""
 func _ready():
 	pass
 
-func _process(delta):
+func _process(_delta):
 	pass
 
 func get_attract():

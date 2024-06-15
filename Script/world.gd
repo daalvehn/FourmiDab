@@ -71,7 +71,6 @@ func adding_planet(planet_position,planet_type):
 	#load json
 	var file = FileAccess.open("res://Data/Planets.json", FileAccess.READ)
 	var data_dict = JSON.parse_string(file.get_as_text())
-	print(planet_type)
 	var planet_info = data_dict[planet_type]
 	#print(typeof(data)) # ENUM Variant, 27 = dictionnary
 	#print("planet info : ", planet_info)
