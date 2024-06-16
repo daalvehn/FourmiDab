@@ -44,13 +44,16 @@ position = Vector2(101.5, 131)
 shape = SubResource("RectangleShape2D_h0jfd")
 
 [node name="Fourmi" parent="." instance=ExtResource("8_o5vvi")]
+visible = false
 position = Vector2(145, 180)
 
 [node name="BlackHole" parent="." instance=ExtResource("9_7nj3r")]
+visible = false
 position = Vector2(1665, 675)
 
 [node name="Path2D" parent="." instance=ExtResource("10_nxet4")]
-position = Vector2(273, 378)
+visible = false
+position = Vector2(1353, 654)
 
 [node name="Debris" parent="Path2D" instance=ExtResource("11_hx7fs")]
 position = Vector2(-100, 0)

@@ -6,14 +6,28 @@ var index = 0
 var planet_selected_info = null
 var planet_name_selected
 var is_colliding_planet = false
+var levelTest = preload("res://Scene/LevelTest.tscn")
+var level1 = preload("res://Scene/level_1.tscn")
+var level_list = [level1, levelTest]
+var index_list = 0
 
 func _ready():
+	change_level()
 	$Ui_level.get_child(0).get_child(0).get_child(2).text = str($Inventory.inventory["PlanetCandy"])
 	$Ui_level.get_child(0).get_child(1).get_child(2).text = str($Inventory.inventory["PlanetLemon"])
+	$BlackHole.player_in.connect(change_level)
 
 func _process(delta):
 	check_input()
 	rotate_planets(delta)
+	
+func change_level():
+	print(index)
+	if index_list <= level_list.size():
+		var level = level_list[index].instantiate()
+		self.add_child(level)
+		index_list += 1
+		print(index)
 
 # Function to check input
 func check_input():

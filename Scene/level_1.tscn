@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://bc50syjb17i6m"]
+
+[ext_resource type="PackedScene" uid="uid://dg8cbxhtcumgb" path="res://Asset/fourmi.tscn" id="1_gpnl7"]
+[ext_resource type="PackedScene" uid="uid://cfiwkn58hch6s" path="res://Asset/black_hole.tscn" id="2_il02p"]
+[ext_resource type="PackedScene" uid="uid://cm5m0bib7iqn1" path="res://Asset/PathCircle.tscn" id="3_xyt5b"]
+[ext_resource type="PackedScene" uid="uid://xdbu1ntd1e35" path="res://Asset/PathDebris.tscn" id="4_s6r74"]
+
+[node name="Level1" type="Node2D"]
+
+[node name="Fourmi" parent="." instance=ExtResource("1_gpnl7")]
+position = Vector2(114, 171)
+
+[node name="BlackHole" parent="." instance=ExtResource("2_il02p")]
+position = Vector2(1702, 680)
+
+[node name="Path2D" parent="." instance=ExtResource("3_xyt5b")]
+position = Vector2(1391, 653)
+
+[node name="Debris" parent="Path2D" instance=ExtResource("4_s6r74")]
+position = Vector2(-100, 0)
