@@ -21,7 +21,6 @@ func _ready():
 func _process(_delta):
 	pass
 
-# collision shape size a tweak (dans le JSON)
 func set_collision_shape_size(new_collision_shape_size):
 	self.collision_shape_size = new_collision_shape_size
 	$CollisionShape1.shape.radius = self.collision_shape_size
@@ -34,7 +33,6 @@ func set_gravity(new_gravity):
 	self.gravity = new_gravity
 	$PlanetArea.gravity = self.gravity
 
-	
 func get_collision_shape_size():
 	return self.collision_shape_size
 	
@@ -74,10 +72,8 @@ func _on_planet_area_input_event(_viewport, event, _shape_idx):
 	if mouse_in_area and event.is_pressed() and event.button_index == MOUSE_BUTTON_RIGHT:
 		planet_right_clicked.emit(self.id)
 
-
 func _on_planet_area_body_entered(body):
 	player_in.emit(true, self.type)
-
 
 func _on_planet_area_body_exited(body):
 	player_in.emit(false, self.type)

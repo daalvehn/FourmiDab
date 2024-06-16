@@ -12,7 +12,6 @@ func _ready():
 	$Ui_level.get_child(0).get_child(1).get_child(2).text = str($Inventory.inventory["PlanetLemon"])
 
 func _process(delta):
-	
 	check_input()
 	rotate_planets(delta)
 
@@ -60,6 +59,8 @@ func remove_planet(planet_id):
 	for planet in planet_list:
 		if(planet.id > planet_id):
 			planet.id -= 1
+	
+	# updating planet collide tag
 	is_colliding_planet = false
 
 # Function to rotate every planet
@@ -90,11 +91,11 @@ func adding_planet(planet_position, planet_name):
 
 	# add planet to world and list
 	self.add_child(planet)
-	
 	planet_list.append(planet)
 	
 	# update global index
 	index = planet_list.size()
+	
 	# connect signal to world
 	planet.planet_right_clicked.connect(_on_planet_right_clicked)
 	planet.mouse_in.connect(update_collide)
@@ -127,7 +128,6 @@ func _on_ui_level_slot_2_pressed():
 	
 func _on_planet_right_clicked(planet_id):
 	remove_planet(planet_id)
-
 
 func _on_gaming_zone_body_exited(body):
 	if body.name == "Fourmi":
