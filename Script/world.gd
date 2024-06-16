@@ -17,25 +17,48 @@ var level8 = preload("res://Scene/level_8.tscn")
 var level9 = preload("res://Scene/level_9.tscn")
 var level_list = [level1,level2,level3,level4,level5,level6,level7,level8,level9]
 var index_list = 0
+var previous_level = null
 
 func _ready():
 	change_level()
 	$Ui_level.get_child(0).get_child(0).get_child(2).text = str($Inventory.inventory["PlanetCandy"])
 	$Ui_level.get_child(0).get_child(1).get_child(2).text = str($Inventory.inventory["PlanetLemon"])
-	$BlackHole.player_in.connect(change_level)
+	#$BlackHole.player_in.connect(change_level)
 
 func _process(delta):
 	check_input()
 	rotate_planets(delta)
 	
 func change_level():
-	print("index before : ", index_list)
-	if index_list <= level_list.size():
+	if index_list < level_list.size():
+		
+		self.set_process(false)
+		
+		# remove the previous loaded level
+		if previous_level != null:
+			print("previous level removed " + str(index_list))
+			self.remove_child(previous_level)
+		
+		# load the next level
 		var level = level_list[index_list].instantiate()
-		print("level : ", level_list[index_list])
-		index_list += 1
+		print("level loaded " + str(index_list))
 		self.add_child(level)
-		print("index after : ", index_list)
+		
+		previous_level = level
+		
+		#level.get_child("BlackHole")
+		level.get_node("BlackHole").player_in.connect(change_level)
+		
+		#$BlackHole.player_in.connect(change_level)
+		
+		# update index of level
+		index_list += 1
+		
+		self.set_process(true)
+		
+	else:
+		print("Fini")
+		
 
 # Function to check input
 func check_input():
@@ -153,4 +176,6 @@ func _on_planet_right_clicked(planet_id):
 
 func _on_gaming_zone_body_exited(body):
 	if body.name == "Fourmi":
-		get_tree().reload_current_scene()
+		index_list -= 1
+		change_level()
+		#get_tree().reload_current_scene()
