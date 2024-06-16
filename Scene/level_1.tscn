@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bc50syjb17i6m"]
+[gd_scene load_steps=10 format=3 uid="uid://bc50syjb17i6m"]
 
 [ext_resource type="PackedScene" uid="uid://dg8cbxhtcumgb" path="res://Asset/fourmi.tscn" id="1_gpnl7"]
 [ext_resource type="PackedScene" uid="uid://cfiwkn58hch6s" path="res://Asset/black_hole.tscn" id="2_il02p"]
@@ -6,6 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://becjw3f3b5hwp" path="res://Asset/Debris.tscn" id="5_fxkae"]
 [ext_resource type="Texture2D" uid="uid://df4icrfgskimq" path="res://Texture/PoolMat_Blue.png" id="6_pvicg"]
 [ext_resource type="Texture2D" uid="uid://bk58c1hmn0wdu" path="res://Texture/PlanetBlue.png" id="6_q00sb"]
+[ext_resource type="Texture2D" uid="uid://dqxaolvnnsq5q" path="res://Texture/PoolMat_Red.png" id="7_gixov"]
+[ext_resource type="PackedScene" uid="uid://74u1vfyvtsv" path="res://Asset/DebrisRectangle.tscn" id="8_vyj0k"]
+[ext_resource type="Texture2D" uid="uid://b8xh3ev208eqr" path="res://Texture/RubberDuck_Yellow.png" id="9_d0aw2"]
 
 [node name="Level1" type="Node2D"]
 
@@ -202,3 +205,27 @@ position = Vector2(204, 964)
 rotation = -0.771139
 scale = Vector2(7.29629, 7.29629)
 texture = ExtResource("6_pvicg")
+
+[node name="RigidBody2D24" parent="." instance=ExtResource("4_4ummf")]
+position = Vector2(1868, 127)
+rotation = -0.771139
+scale = Vector2(7.29629, 7.29629)
+texture = ExtResource("6_pvicg")
+
+[node name="RigidBody2D25" parent="." instance=ExtResource("4_4ummf")]
+position = Vector2(1376, 1061)
+rotation = 1.15626
+scale = Vector2(7.29629, 7.29629)
+texture = ExtResource("7_gixov")
+
+[node name="RigidBody2D26" parent="." instance=ExtResource("8_vyj0k")]
+position = Vector2(304, -19.0001)
+rotation = -0.772828
+scale = Vector2(5.24522, 5.24522)
+texture = ExtResource("9_d0aw2")
+
+[node name="RigidBody2D27" parent="." instance=ExtResource("5_fxkae")]
+position = Vector2(1069, 498)
+scale = Vector2(4.02881, 4.02881)
+freeze = true
+texture = ExtResource("9_d0aw2")

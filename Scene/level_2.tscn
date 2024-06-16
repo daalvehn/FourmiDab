@@ -28,12 +28,6 @@ rotation = 0.926674
 scale = Vector2(7.02347, 7.02347)
 texture = ExtResource("4_ktwdn")
 
-[node name="RigidBody2D12" parent="." instance=ExtResource("3_hxtrr")]
-position = Vector2(692, 772)
-rotation = -0.127977
-scale = Vector2(2.02462, 2.02462)
-texture = ExtResource("4_ktwdn")
-
 [node name="RigidBody2D2" parent="." instance=ExtResource("3_hxtrr")]
 position = Vector2(1817, 267)
 rotation = 0.155427
@@ -60,6 +54,14 @@ texture = ExtResource("4_ktwdn")
 
 [node name="RigidBody2D5" parent="." instance=ExtResource("5_12tlo")]
 position = Vector2(180, 757)
+sleeping = true
+can_sleep = true
+lock_rotation = true
+freeze = true
+texture = ExtResource("6_gp5h2")
+
+[node name="RigidBody2D12" parent="." instance=ExtResource("5_12tlo")]
+position = Vector2(1595, 850)
 sleeping = true
 can_sleep = true
 lock_rotation = true
