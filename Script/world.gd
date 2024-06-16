@@ -6,9 +6,16 @@ var index = 0
 var planet_selected_info = null
 var planet_name_selected
 var is_colliding_planet = false
-var levelTest = preload("res://Scene/LevelTest.tscn")
 var level1 = preload("res://Scene/level_1.tscn")
-var level_list = [level1, levelTest]
+var level2 = preload("res://Scene/level_2.tscn")
+var level3 = preload("res://Scene/level_3.tscn")
+var level4 = preload("res://Scene/level_4.tscn")
+var level5 = preload("res://Scene/level_5.tscn")
+var level6 = preload("res://Scene/level_6.tscn")
+var level7 = preload("res://Scene/level_7.tscn")
+var level8 = preload("res://Scene/level_8.tscn")
+var level9 = preload("res://Scene/level_9.tscn")
+var level_list = [level1,level2,level3,level4,level5,level6,level7,level8,level9]
 var index_list = 0
 
 func _ready():
