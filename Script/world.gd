@@ -15,7 +15,8 @@ var level6 = preload("res://Scene/level_6.tscn")
 var level7 = preload("res://Scene/level_7.tscn")
 var level8 = preload("res://Scene/level_8.tscn")
 var level9 = preload("res://Scene/level_9.tscn")
-var level_list = [level1,level2,level3,level5,level9]
+var levelgg = preload("res://Scene/level_gg.tscn")
+var level_list = [level1,level2,level3,level5,level9,levelgg]
 var index_list = 0
 var previous_level = null
 
@@ -57,11 +58,6 @@ func change_level():
 		
 		self.set_process(true)
 		
-	else:
-		get_tree().change_scene_to_file("res://Scene/level_gg.tscn")
-		print("Fini")
-		
-
 # Function to check input
 func check_input():
 	var mouse_pos = get_global_mouse_position()
@@ -92,9 +88,9 @@ func remove_planet(planet_id):
 	# Add back to inventory
 	$Inventory.inventory[planet_list[planet_id].type] += 1
 	if planet_list[planet_id].type == "PlanetCandy":
-		$Ui_level.get_child(0).get_child(0).get_child(2).text = str($Inventory.inventory[planet_list[planet_id].type])
+		$Ui_level.get_child(0).get_child(0).get_child(2).text = "E"
 	else:
-		$Ui_level.get_child(0).get_child(1).get_child(2).text = str($Inventory.inventory[planet_list[planet_id].type])
+		$Ui_level.get_child(0).get_child(1).get_child(2).text = "R"
 
 	# removing planet from list
 	planet_list.remove_at(planet_id)
@@ -162,9 +158,9 @@ func _on_gaming_zone_player_click_in_gaming_zone(planet_position):
 	adding_planet(planet_position, planet_name_selected)
 	$Inventory.inventory[planet_name_selected] -= 1
 	if planet_name_selected == "PlanetLemon":
-		$Ui_level.get_child(0).get_child(1).get_child(2).text = str($Inventory.inventory[planet_name_selected])
+		$Ui_level.get_child(0).get_child(1).get_child(2).text = "R"
 	else:
-		$Ui_level.get_child(0).get_child(0).get_child(2).text = str($Inventory.inventory[planet_name_selected])
+		$Ui_level.get_child(0).get_child(0).get_child(2).text = "E"
 
 func _on_ui_level_slot_2_pressed():
 	var file = FileAccess.open("res://Data/Planets.json", FileAccess.READ)

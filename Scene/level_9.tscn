@@ -4,9 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://ymlasnc4ude4" path="res://Texture/Marmelanete.png" id="2_fyk8j"]
 [ext_resource type="PackedScene" uid="uid://cfiwkn58hch6s" path="res://Asset/black_hole.tscn" id="2_t4u82"]
 [ext_resource type="PackedScene" uid="uid://cm5m0bib7iqn1" path="res://Asset/PathCircle.tscn" id="4_d2i3c"]
-[ext_resource type="PackedScene" uid="uid://xdbu1ntd1e35" path="res://Asset/PathDebris.tscn" id="5_uu4pc"]
-[ext_resource type="PackedScene" uid="uid://74u1vfyvtsv" path="res://Asset/PathDebrisRectangle.tscn" id="6_5dae6"]
-[ext_resource type="PackedScene" uid="uid://74u1vfyvtsv" path="res://Asset/DebrisRectangle.tscn" id="6_laj7n"]
+[ext_resource type="Texture2D" uid="uid://il0p77hm3rr3" path="res://Texture/PlanetPink.png" id="5_bij5b"]
+[ext_resource type="Texture2D" uid="uid://bk58c1hmn0wdu" path="res://Texture/PlanetBlue.png" id="6_5rycq"]
+[ext_resource type="PackedScene" uid="uid://74u1vfyvtsv" path="res://Asset/PathDebrisRectangle.tscn" id="6_laj7n"]
+[ext_resource type="Texture2D" uid="uid://ctausmai83r3" path="res://Texture/PlanetGreen.png" id="7_5obdp"]
 [ext_resource type="Texture2D" uid="uid://b3c54x8jhio3x" path="res://Texture/PoolMat_Green.png" id="7_73hth"]
 [ext_resource type="Texture2D" uid="uid://df4icrfgskimq" path="res://Texture/PoolMat_Blue.png" id="7_jdbs2"]
 [ext_resource type="Texture2D" uid="uid://dqxaolvnnsq5q" path="res://Texture/PoolMat_Red.png" id="8_dfh6o"]
@@ -14,114 +15,8 @@
 [ext_resource type="Texture2D" uid="uid://b8xh3ev208eqr" path="res://Texture/RubberDuck_Yellow.png" id="11_6lqpr"]
 [ext_resource type="Texture2D" uid="uid://cf0hdium4u6f" path="res://Texture/RubberDuck_Blue.png" id="12_l5ygn"]
 [ext_resource type="Texture2D" uid="uid://d36hlf01t3xgo" path="res://Texture/RubberDuck_Pink.png" id="13_okuu8"]
-[ext_resource type="PackedScene" uid="uid://cqrgfapps58em" path="res://Asset/pink_planet.tscn" id="15_tyfmf"]
 
 [node name="Level1" type="Node2D"]
-
-[node name="Fourmi" parent="." instance=ExtResource("1_obswu")]
-position = Vector2(114, 171)
-
-[node name="BlackHole" parent="." instance=ExtResource("2_t4u82")]
-position = Vector2(946, 513)
-
-[node name="Sprite2D" parent="BlackHole" index="0"]
-texture = ExtResource("2_fyk8j")
-
-[node name="CollisionShape2D" parent="BlackHole/Sprite2D/Area2D" index="0"]
-visible = false
-
-[node name="CollisionShape2D" parent="BlackHole/AttractionZone" index="0"]
-visible = false
-
-[node name="Path2D" parent="." instance=ExtResource("4_d2i3c")]
-position = Vector2(941, 504)
-
-[node name="PathFollow2D" parent="Path2D" instance=ExtResource("5_uu4pc")]
-position = Vector2(-100, 0)
-scale = Vector2(0.666844, 0.666844)
-
-[node name="Path2D6" parent="." instance=ExtResource("4_d2i3c")]
-position = Vector2(941, 504)
-rotation = -2.30306
-
-[node name="PathFollow2D" parent="Path2D6" instance=ExtResource("5_uu4pc")]
-position = Vector2(-100, 0)
-scale = Vector2(0.666844, 0.666844)
-
-[node name="Path2D7" parent="." instance=ExtResource("4_d2i3c")]
-position = Vector2(941, 504)
-rotation = -4.33888
-
-[node name="PathFollow2D" parent="Path2D7" instance=ExtResource("5_uu4pc")]
-position = Vector2(-100, 0)
-scale = Vector2(0.666844, 0.666844)
-
-[node name="Path2D2" parent="." instance=ExtResource("4_d2i3c")]
-position = Vector2(1343, 865)
-rotation = 1.62449
-
-[node name="PathFollow2D" parent="Path2D2" instance=ExtResource("5_uu4pc")]
-position = Vector2(-92.4428, -17.7374)
-scale = Vector2(0.666844, 0.666844)
-periodInSecond = -10.0
-
-[node name="PinkPlanet" parent="Path2D2" instance=ExtResource("15_tyfmf")]
-position = Vector2(0.0357056, 0.665955)
-rotation = -1.62449
-scale = Vector2(2.53057, 2.53057)
-
-[node name="Path2D4" parent="." instance=ExtResource("4_d2i3c")]
-position = Vector2(863, 174)
-rotation = 1.62449
-
-[node name="PathFollow2D" parent="Path2D4" instance=ExtResource("5_uu4pc")]
-position = Vector2(-100, 0)
-scale = Vector2(0.666844, 0.666844)
-periodInSecond = -10.0
-
-[node name="PinkPlanet" parent="Path2D4" instance=ExtResource("15_tyfmf")]
-position = Vector2(0.0357056, 0.665955)
-rotation = -1.62449
-scale = Vector2(2.53057, 2.53057)
-
-[node name="Path2D8" parent="." instance=ExtResource("4_d2i3c")]
-position = Vector2(742, 902)
-rotation = 1.62449
-scale = Vector2(2.07292, 2.07292)
-
-[node name="PathFollow2D" parent="Path2D8" instance=ExtResource("5_uu4pc")]
-position = Vector2(-100, 0)
-scale = Vector2(0.666844, 0.666844)
-periodInSecond = -10.0
-
-[node name="PinkPlanet" parent="Path2D8" instance=ExtResource("15_tyfmf")]
-position = Vector2(0.0357056, 0.665955)
-rotation = -1.62449
-scale = Vector2(1.38585, 1.38585)
-
-[node name="Path2D5" parent="." instance=ExtResource("4_d2i3c")]
-position = Vector2(99.0002, 784)
-rotation = 1.62449
-
-[node name="PathFollow2D" parent="Path2D5" instance=ExtResource("5_uu4pc")]
-position = Vector2(-100, 0)
-scale = Vector2(0.666844, 0.666844)
-periodInSecond = -10.0
-
-[node name="PinkPlanet" parent="Path2D5" instance=ExtResource("15_tyfmf")]
-position = Vector2(0.0357056, 0.665955)
-rotation = -1.62449
-scale = Vector2(2.53057, 2.53057)
-
-[node name="Path2D3" parent="." instance=ExtResource("4_d2i3c")]
-position = Vector2(365, 982)
-rotation = 1.62449
-
-[node name="PathFollow2D" parent="Path2D3" instance=ExtResource("6_5dae6")]
-position = Vector2(-79.8345, 5.62616)
-rotation = -1.62449
-scale = Vector2(0.666844, 0.666844)
-texture = ExtResource("8_dfh6o")
 
 [node name="blue" parent="." instance=ExtResource("6_laj7n")]
 position = Vector2(410, 226)
@@ -136,7 +31,7 @@ scale = Vector2(4.34875, -4.89217)
 texture = ExtResource("7_jdbs2")
 
 [node name="blue3" parent="." instance=ExtResource("6_laj7n")]
-position = Vector2(958, 713)
+position = Vector2(985, 745)
 rotation = 4.65383
 scale = Vector2(-2.36443, 2.65989)
 texture = ExtResource("7_jdbs2")
@@ -148,13 +43,13 @@ scale = Vector2(2.12107, -2.38613)
 texture = ExtResource("7_73hth")
 
 [node name="green2" parent="." instance=ExtResource("6_laj7n")]
-position = Vector2(696, 522)
+position = Vector2(629, 514)
 rotation = -0.253515
 scale = Vector2(4.33767, -4.87971)
 texture = ExtResource("7_73hth")
 
 [node name="green3" parent="." instance=ExtResource("6_laj7n")]
-position = Vector2(1150, 519)
+position = Vector2(1175, 517)
 rotation = 0.123319
 scale = Vector2(2.09627, -2.35822)
 texture = ExtResource("7_73hth")
@@ -169,7 +64,19 @@ texture = ExtResource("8_dfh6o")
 position = Vector2(380, 992)
 rotation = 4.59216
 scale = Vector2(3.50267, -3.94037)
-texture = ExtResource("8_dfh6o")
+texture = ExtResource("5_bij5b")
+
+[node name="red3" parent="." instance=ExtResource("6_laj7n")]
+position = Vector2(928, 173)
+rotation = 4.59216
+scale = Vector2(3.50267, -3.94037)
+texture = ExtResource("6_5rycq")
+
+[node name="red4" parent="." instance=ExtResource("6_laj7n")]
+position = Vector2(86.0001, 546)
+rotation = 4.59216
+scale = Vector2(3.50267, -3.94037)
+texture = ExtResource("7_5obdp")
 
 [node name="RigidBody2D" parent="." instance=ExtResource("10_2fibj")]
 position = Vector2(423, 840)
@@ -198,4 +105,72 @@ can_sleep = true
 lock_rotation = true
 texture = ExtResource("13_okuu8")
 
-[editable path="BlackHole"]
+[node name="Marmelanete" type="Sprite2D" parent="."]
+position = Vector2(944, 503)
+scale = Vector2(1.84988, 1.84988)
+texture = ExtResource("2_fyk8j")
+
+[node name="Fourmi" parent="." instance=ExtResource("1_obswu")]
+position = Vector2(95, 78)
+
+[node name="BlackHole" parent="." instance=ExtResource("2_t4u82")]
+position = Vector2(941, 500)
+
+[node name="Path2D" parent="." instance=ExtResource("4_d2i3c")]
+position = Vector2(933, 498)
+
+[node name="PathFollow2D" parent="Path2D" instance=ExtResource("6_laj7n")]
+position = Vector2(-100, 0)
+scale = Vector2(0.666844, 0.666844)
+
+[node name="Path2D2" parent="." instance=ExtResource("4_d2i3c")]
+position = Vector2(933, 498)
+rotation = -2.34227
+
+[node name="PathFollow2D" parent="Path2D2" instance=ExtResource("6_laj7n")]
+position = Vector2(-100, 0)
+scale = Vector2(0.666844, 0.666844)
+
+[node name="Path2D3" parent="." instance=ExtResource("4_d2i3c")]
+position = Vector2(933, 498)
+rotation = -4.51572
+
+[node name="PathFollow2D" parent="Path2D3" instance=ExtResource("6_laj7n")]
+position = Vector2(-100, 0)
+scale = Vector2(0.666844, 0.666844)
+
+[node name="Path2D4" parent="." instance=ExtResource("4_d2i3c")]
+position = Vector2(414, 837)
+rotation = -4.51572
+
+[node name="PathFollow2D" parent="Path2D4" instance=ExtResource("6_laj7n")]
+position = Vector2(-100, 0)
+scale = Vector2(0.666844, 0.666844)
+texture = ExtResource("13_okuu8")
+
+[node name="Path2D7" parent="." instance=ExtResource("4_d2i3c")]
+position = Vector2(79, 535)
+rotation = -4.51572
+
+[node name="PathFollow2D" parent="Path2D7" instance=ExtResource("6_laj7n")]
+position = Vector2(-100, 0)
+scale = Vector2(0.666844, 0.666844)
+texture = ExtResource("12_l5ygn")
+
+[node name="Path2D5" parent="." instance=ExtResource("4_d2i3c")]
+position = Vector2(1094, 951)
+rotation = -4.51572
+
+[node name="PathFollow2D" parent="Path2D5" instance=ExtResource("6_laj7n")]
+position = Vector2(-100, 0)
+scale = Vector2(0.666844, 0.666844)
+texture = ExtResource("12_l5ygn")
+
+[node name="Path2D6" parent="." instance=ExtResource("4_d2i3c")]
+position = Vector2(926, 161)
+rotation = -4.51572
+
+[node name="PathFollow2D" parent="Path2D6" instance=ExtResource("6_laj7n")]
+position = Vector2(-100, 0)
+scale = Vector2(0.666844, 0.666844)
+texture = ExtResource("12_l5ygn")
