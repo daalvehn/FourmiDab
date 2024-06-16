@@ -38,10 +38,11 @@ func change_level():
 			self.remove_child(previous_level)
 			
 			# reset planet list
-			#print("planet list : ", planet_list)
-			#for planet in planet_list:
-				#remove_planet(planet.id)	
-			#print("planet list : ", planet_list)
+			#print("planet list before : ", planet_list)
+			#var planet_list_copy = planet_list.duplicate()
+			#for planet in planet_list_copy:
+				#remove_planet(planet.id)
+			#print("planet list after : ", planet_list)
 		
 		# load the next level
 		var level = level_list[index_list].instantiate()
