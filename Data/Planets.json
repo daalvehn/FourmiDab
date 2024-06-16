@@ -4,7 +4,7 @@
 					"rotation_speed" : 2,
 					"collision_shape_size" : 21,
 					"attraction_shape_size" : 130,
-					"gravity" : 750,
+					"gravity" : 600,
 					"size" : 2
 					},
 					
@@ -13,7 +13,7 @@
 					"rotation_speed" : 4, 
 					"collision_shape_size" : 25,
 					"attraction_shape_size" : 130, 
-					"gravity" : -700,
+					"gravity" : -600,
 					"size" : 2
 					}
 				
