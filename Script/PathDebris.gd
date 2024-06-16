@@ -3,7 +3,8 @@ extends Node2D
 @export var texture: Texture
 
 func _ready():
-	$Sprite2D.texture = texture
+	if texture:
+		$Sprite2D.texture = texture
 
 func _process(delta):
 	if self.get_child(0).get_parent() is PathFollow2D:
