@@ -58,6 +58,7 @@ func change_level():
 		self.set_process(true)
 		
 	else:
+		get_tree().change_scene_to_file("res://Scene/level_gg.tscn")
 		print("Fini")
 		
 
