@@ -8,7 +8,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mp1ta"]
 size = Vector2(16.7173, 39.0071)
 
-[node name="Debris" type="PathFollow2D"]
+[node name="PathFollow2D" type="PathFollow2D"]
 rotates = false
 script = ExtResource("1_n3ewf")
 periodInSecond = 10.0
