@@ -14,13 +14,16 @@ script = ExtResource("1_snckh")
 
 [node name="CollisionShape1" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_vlp2e")
+disabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 
 [node name="PlanetArea" type="Area2D" parent="."]
-gravity_space_override = 3
+gravity_space_override = 2
 gravity_point = true
-gravity = 901.981
+gravity_point_center = Vector2(0, 0)
+gravity_direction = Vector2(0, 0)
+gravity = 500.0
 
 [node name="CollisionShape2" type="CollisionShape2D" parent="PlanetArea"]
 shape = SubResource("CircleShape2D_2fjha")
@@ -28,6 +31,8 @@ shape = SubResource("CircleShape2D_2fjha")
 [node name="DrawCircle" type="Node2D" parent="."]
 script = ExtResource("2_4um7m")
 
+[connection signal="body_entered" from="PlanetArea" to="." method="_on_planet_area_body_entered"]
+[connection signal="body_exited" from="PlanetArea" to="." method="_on_planet_area_body_exited"]
 [connection signal="input_event" from="PlanetArea" to="." method="_on_planet_area_input_event"]
 [connection signal="mouse_entered" from="PlanetArea" to="." method="_on_planet_area_mouse_entered"]
 [connection signal="mouse_exited" from="PlanetArea" to="." method="_on_planet_area_mouse_exited"]

@@ -1,61 +1,21 @@
 {
 	"PlanetCandy":{
 					"sprite_path" : "res://Texture/PlanetCandy.png",
-					"attract" : true,
-					"force" : 3.0,
 					"rotation_speed" : 2,
 					"collision_shape_size" : 21,
 					"attraction_shape_size" : 130,
-					"gravity" : 981,
+					"gravity" : 750,
 					"size" : 2
 					},
 					
 	"PlanetLemon":{
 					"sprite_path" : "res://Texture/PlanetLemon.png",
-					"attract" : false,
-					"force" : 2.0,
 					"rotation_speed" : 4, 
 					"collision_shape_size" : 25,
 					"attraction_shape_size" : 130, 
-					"gravity" : -981,
+					"gravity" : -700,
 					"size" : 2
-					},
-					
-	"Marmelanete":{
-					"sprite_path" : "res://Texture/Marmelanete.png",
-					"attract" : true,
-					"force" : 5.0,
-					"rotation_speed" : 0.8, 
-					"collision_shape_size" : 1.9, 
-					"size" : 4
-					},
-					
-	"BlackHole":{
-					"sprite_path" : "res://Texture/PlanetBlackhole.png",
-					"attract" : true,
-					"force" : 8.0,
-					"rotation_speed" : -0.1, 
-					"collision_shape_size" : 2.2,
-					"size" : 3
-				},
-				
-	"PlanetPink":{
-					"sprite_path" : "res://Texture/PlanetPink.png",
-					"attract" : true,
-					"force" : 3.0,
-					"rotation_speed" : 2.5, 
-					"collision_shape_size" : 0.825,
-					"size" : 2
-				},
-				
-	"Asteroid":{
-					"sprite_path" : "res://Texture/PlanetAsteroid.png",
-					"attract" : false,
-					"force" : 0,
-					"rotation_speed" : 0, 
-					"collision_shape_size" : 0.55,
-					"size" : 4.5
-				}
+					}
 				
 				
 }

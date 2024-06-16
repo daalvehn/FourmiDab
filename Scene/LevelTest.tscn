@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://csbeac3m388wf"]
+[gd_scene load_steps=12 format=3 uid="uid://csbeac3m388wf"]
 
 [ext_resource type="Script" path="res://Script/LevelTest.gd" id="1_6n4fd"]
 [ext_resource type="PackedScene" uid="uid://dmps6f51enln7" path="res://Asset/ground.tscn" id="2_rg3ec"]
@@ -6,8 +6,11 @@
 [ext_resource type="PackedScene" uid="uid://dgmjobw1a4ygn" path="res://Asset/candy_planet.tscn" id="4_n0wjj"]
 [ext_resource type="PackedScene" uid="uid://bu0aqoneej781" path="res://Asset/citrus_planet.tscn" id="5_14bkt"]
 [ext_resource type="PackedScene" uid="uid://bljreyqk520e2" path="res://Asset/marmelanete.tscn" id="6_587yl"]
-[ext_resource type="PackedScene" uid="uid://bhgf0c1v04wgr" path="res://Asset/stars_emitter.tscn" id="7_p6egn"]
+[ext_resource type="PackedScene" uid="uid://bnke4lqc6wh5f" path="res://Asset/stars_emitter.tscn" id="7_p6egn"]
 [ext_resource type="PackedScene" uid="uid://cfiwkn58hch6s" path="res://Asset/black_hole.tscn" id="8_50dif"]
+[ext_resource type="PackedScene" uid="uid://cqrgfapps58em" path="res://Asset/pink_planet.tscn" id="9_gfkr6"]
+[ext_resource type="PackedScene" uid="uid://cm5m0bib7iqn1" path="res://Asset/PathCircle.tscn" id="10_plget"]
+[ext_resource type="PackedScene" uid="uid://xdbu1ntd1e35" path="res://Asset/PathDebris.tscn" id="11_qnu7k"]
 
 [node name="LevelTest" type="Node2D"]
 script = ExtResource("1_6n4fd")
@@ -33,3 +36,12 @@ position = Vector2(988, 556)
 
 [node name="BlackHole" parent="." instance=ExtResource("8_50dif")]
 position = Vector2(1168, 212)
+
+[node name="PinkPlanet" parent="." instance=ExtResource("9_gfkr6")]
+position = Vector2(1229, 399)
+
+[node name="Path2D" parent="." instance=ExtResource("10_plget")]
+position = Vector2(623, 508)
+
+[node name="Debris" parent="Path2D" instance=ExtResource("11_qnu7k")]
+position = Vector2(-100, 0)

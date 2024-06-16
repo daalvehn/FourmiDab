@@ -12,4 +12,3 @@ func _process(delta):
 
 func _draw():
 	draw_circle(self.position, self.get_parent().get_child(2).get_child(0).shape.radius, Color(1,1,1,0.1))
-	print(self.get_parent().get_child(2).get_child(0))

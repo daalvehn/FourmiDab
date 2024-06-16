@@ -1,9 +1,8 @@
 extends Area2D
 
-# @export necessaire ?
-@export var slot_1_is_clicked = false
-@export var slot_2_is_clicked = false
-@export var mouse_in_area = false
+var slot_1_is_clicked = false
+var slot_2_is_clicked = false
+var mouse_in_area = false
 
 signal player_click_in_gaming_zone
 

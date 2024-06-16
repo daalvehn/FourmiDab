@@ -66,7 +66,7 @@ func remove_planet(planet_id):
 func rotate_planets(delta):
 	if not planet_list.is_empty() :
 		for planet in planet_list:
-			planet.rotate(delta * planet.get_rotation_speed())
+			planet.rotate(delta * planet.rotation_speed)
 
 # Function to add a planet
 func adding_planet(planet_position, planet_name):
@@ -77,8 +77,6 @@ func adding_planet(planet_position, planet_name):
 	var planet = planet_scene.instantiate()
 	
 	# extract info & apply properties
-	planet.set_attract(planet_info["attract"])
-	planet.set_force(planet_info["force"])
 	planet.set_id(index)
 	planet.position = planet_position
 	planet.set_rotation_speed(planet_info["rotation_speed"])
@@ -87,7 +85,6 @@ func adding_planet(planet_position, planet_name):
 	planet.set_sprite_path(planet_info["sprite_path"])	
 	planet.set_attraction_shape_size(planet_info["attraction_shape_size"])
 	planet.set_gravity(planet_info["gravity"])
-	print(planet.gravity)
 	planet.name = "planet" + str(index)
 	planet.type = planet_name
 
@@ -130,3 +127,8 @@ func _on_ui_level_slot_2_pressed():
 	
 func _on_planet_right_clicked(planet_id):
 	remove_planet(planet_id)
+
+
+func _on_gaming_zone_body_exited(body):
+	if body.name == "Fourmi":
+		get_tree().reload_current_scene()
