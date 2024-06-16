@@ -4,18 +4,17 @@
 [ext_resource type="Texture2D" uid="uid://cuuud14es0bdt" path="res://Texture/astronant.png" id="2_0rwo6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7b1cu"]
-radius = 17.0
-height = 38.0
+radius = 16.0
+height = 32.0
 
 [node name="Fourmi" type="RigidBody2D"]
 script = ExtResource("1_r75fh")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0.749999, 2.25)
-scale = Vector2(1.06522, 1.19565)
 texture = ExtResource("2_0rwo6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
-position = Vector2(0, -3)
+position = Vector2(0, -2)
 shape = SubResource("CapsuleShape2D_7b1cu")
