@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cll831p87tn30"]
+[gd_scene load_steps=4 format=3 uid="uid://cll831p87tn30"]
 
 [ext_resource type="PackedScene" uid="uid://dg8cbxhtcumgb" path="res://Asset/fourmi.tscn" id="1_obswu"]
+[ext_resource type="Texture2D" uid="uid://6tka2daii64n" path="res://Texture/Marmelanete.png" id="2_fyk8j"]
 [ext_resource type="PackedScene" uid="uid://cfiwkn58hch6s" path="res://Asset/black_hole.tscn" id="2_t4u82"]
-[ext_resource type="PackedScene" uid="uid://cm5m0bib7iqn1" path="res://Asset/PathCircle.tscn" id="3_15pcm"]
-[ext_resource type="PackedScene" uid="uid://xdbu1ntd1e35" path="res://Asset/PathDebris.tscn" id="4_nto2q"]
 
 [node name="Level1" type="Node2D"]
 
@@ -11,10 +10,9 @@
 position = Vector2(114, 171)
 
 [node name="BlackHole" parent="." instance=ExtResource("2_t4u82")]
-position = Vector2(1702, 680)
+position = Vector2(946, 513)
 
-[node name="Path2D" parent="." instance=ExtResource("3_15pcm")]
-position = Vector2(1391, 653)
+[node name="Sprite2D" parent="BlackHole" index="0"]
+texture = ExtResource("2_fyk8j")
 
-[node name="Debris" parent="Path2D" instance=ExtResource("4_nto2q")]
-position = Vector2(-100, 0)
+[editable path="BlackHole"]

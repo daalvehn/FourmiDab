@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bc50syjb17i6m"]
+[gd_scene load_steps=7 format=3 uid="uid://bc50syjb17i6m"]
 
 [ext_resource type="PackedScene" uid="uid://dg8cbxhtcumgb" path="res://Asset/fourmi.tscn" id="1_gpnl7"]
 [ext_resource type="PackedScene" uid="uid://cfiwkn58hch6s" path="res://Asset/black_hole.tscn" id="2_il02p"]
+[ext_resource type="PackedScene" uid="uid://74u1vfyvtsv" path="res://Asset/DebrisRectangle.tscn" id="4_4ummf"]
 [ext_resource type="PackedScene" uid="uid://becjw3f3b5hwp" path="res://Asset/Debris.tscn" id="5_fxkae"]
-[ext_resource type="PackedScene" uid="uid://74u1vfyvtsv" path="res://Asset/DebrisRectangle.tscn" id="5_ggvli"]
 [ext_resource type="Texture2D" uid="uid://df4icrfgskimq" path="res://Texture/PoolMat_Blue.png" id="6_pvicg"]
+[ext_resource type="Texture2D" uid="uid://bk58c1hmn0wdu" path="res://Texture/PlanetBlue.png" id="6_q00sb"]
 
 [node name="Level1" type="Node2D"]
 
@@ -14,12 +15,142 @@ position = Vector2(114, 171)
 [node name="BlackHole" parent="." instance=ExtResource("2_il02p")]
 position = Vector2(1723, 514)
 
-[node name="RigidBody2D" parent="." instance=ExtResource("5_ggvli")]
-position = Vector2(568, 82)
-rotation = -0.55896
-scale = Vector2(4.27888, 4.27888)
-texture = ExtResource("6_pvicg")
+[node name="RigidBody2D" parent="." instance=ExtResource("5_fxkae")]
+position = Vector2(448, 480)
+mass = 0.01
+center_of_mass_mode = 1
+sleeping = true
+can_sleep = true
+lock_rotation = true
+freeze = true
 
 [node name="RigidBody2D2" parent="." instance=ExtResource("5_fxkae")]
-position = Vector2(131, 565)
-scale = Vector2(8.99302, 8.99302)
+position = Vector2(396, 486)
+mass = 0.01
+center_of_mass_mode = 1
+sleeping = true
+can_sleep = true
+lock_rotation = true
+freeze = true
+
+[node name="RigidBody2D3" parent="." instance=ExtResource("5_fxkae")]
+position = Vector2(440, 530)
+mass = 0.01
+center_of_mass_mode = 1
+sleeping = true
+can_sleep = true
+lock_rotation = true
+freeze = true
+
+[node name="RigidBody2D4" parent="." instance=ExtResource("5_fxkae")]
+position = Vector2(480, 432)
+mass = 0.01
+center_of_mass_mode = 1
+sleeping = true
+can_sleep = true
+lock_rotation = true
+freeze = true
+
+[node name="RigidBody2D5" parent="." instance=ExtResource("5_fxkae")]
+position = Vector2(508, 500)
+mass = 0.01
+center_of_mass_mode = 1
+sleeping = true
+can_sleep = true
+lock_rotation = true
+freeze = true
+
+[node name="RigidBody2D6" parent="." instance=ExtResource("5_fxkae")]
+position = Vector2(418, 426)
+mass = 0.01
+center_of_mass_mode = 1
+sleeping = true
+can_sleep = true
+lock_rotation = true
+freeze = true
+
+[node name="RigidBody2D7" parent="." instance=ExtResource("5_fxkae")]
+position = Vector2(981, 211)
+mass = 0.01
+center_of_mass_mode = 1
+sleeping = true
+can_sleep = true
+lock_rotation = true
+freeze = true
+
+[node name="RigidBody2D8" parent="." instance=ExtResource("5_fxkae")]
+position = Vector2(1066, 262)
+mass = 0.01
+center_of_mass_mode = 1
+sleeping = true
+can_sleep = true
+lock_rotation = true
+freeze = true
+
+[node name="RigidBody2D9" parent="." instance=ExtResource("5_fxkae")]
+position = Vector2(871, 774)
+mass = 0.01
+center_of_mass_mode = 1
+sleeping = true
+can_sleep = true
+lock_rotation = true
+freeze = true
+
+[node name="RigidBody2D10" parent="." instance=ExtResource("5_fxkae")]
+position = Vector2(896, 734)
+mass = 0.01
+center_of_mass_mode = 1
+sleeping = true
+can_sleep = true
+lock_rotation = true
+freeze = true
+
+[node name="RigidBody2D11" parent="." instance=ExtResource("5_fxkae")]
+position = Vector2(1787, 923)
+mass = 0.01
+
+[node name="RigidBody2D12" parent="." instance=ExtResource("5_fxkae")]
+position = Vector2(1801, 975)
+mass = 0.01
+
+[node name="RigidBody2D13" parent="." instance=ExtResource("5_fxkae")]
+position = Vector2(1049, 185)
+mass = 0.01
+center_of_mass_mode = 1
+sleeping = true
+can_sleep = true
+lock_rotation = true
+freeze = true
+
+[node name="RigidBody2D14" parent="." instance=ExtResource("5_fxkae")]
+position = Vector2(927, 771)
+mass = 0.01
+center_of_mass_mode = 1
+sleeping = true
+can_sleep = true
+lock_rotation = true
+freeze = true
+
+[node name="RigidBody2D15" parent="." instance=ExtResource("5_fxkae")]
+position = Vector2(1476, 208)
+mass = 0.01
+
+[node name="RigidBody2D16" parent="." instance=ExtResource("5_fxkae")]
+position = Vector2(1546, 257)
+mass = 0.01
+
+[node name="RigidBody2D17" parent="." instance=ExtResource("4_4ummf")]
+position = Vector2(204, 964)
+rotation = -0.771139
+scale = Vector2(7.29629, 7.29629)
+texture = ExtResource("6_pvicg")
+
+[node name="RigidBody2D18" parent="." instance=ExtResource("5_fxkae")]
+position = Vector2(511, 201)
+mass = 0.01
+center_of_mass_mode = 1
+sleeping = true
+can_sleep = true
+lock_rotation = true
+freeze = true
+texture = ExtResource("6_q00sb")
