@@ -23,7 +23,6 @@ func _ready():
 	change_level()
 	$Ui_level.get_child(0).get_child(0).get_child(2).text = str($Inventory.inventory["PlanetCandy"])
 	$Ui_level.get_child(0).get_child(1).get_child(2).text = str($Inventory.inventory["PlanetLemon"])
-	#$BlackHole.player_in.connect(change_level)
 
 func _process(delta):
 	check_input()
@@ -44,13 +43,13 @@ func change_level():
 		print("level loaded " + str(index_list))
 		self.add_child(level)
 		
+		# reset planet list
+		planet_list = []
+		
+		# prepare the removing for the next level
 		previous_level = level
-		
-		#level.get_child("BlackHole")
 		level.get_node("BlackHole").player_in.connect(change_level)
-		
-		#$BlackHole.player_in.connect(change_level)
-		
+				
 		# update index of level
 		index_list += 1
 		
@@ -178,4 +177,3 @@ func _on_gaming_zone_body_exited(body):
 	if body.name == "Fourmi":
 		index_list -= 1
 		change_level()
-		#get_tree().reload_current_scene()
