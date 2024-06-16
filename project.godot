@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="FourmiDab"
-run/main_scene="res://Scene/current_level.tscn"
+run/main_scene="res://Scene/level_0_Start.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 

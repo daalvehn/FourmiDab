@@ -1,7 +1,8 @@
-[gd_scene load_steps=17 format=3 uid="uid://b0xrokerr4tg5"]
+[gd_scene load_steps=18 format=3 uid="uid://b0xrokerr4tg5"]
 
 [ext_resource type="Texture2D" uid="uid://cdhjk5sx31vr6" path="res://Texture/galaxy.png" id="1_2cl62"]
 [ext_resource type="PackedScene" uid="uid://dg8cbxhtcumgb" path="res://Asset/fourmi.tscn" id="1_3kh28"]
+[ext_resource type="Script" path="res://Script/level_0_Start.gd" id="1_dpx11"]
 [ext_resource type="PackedScene" uid="uid://cfiwkn58hch6s" path="res://Asset/black_hole.tscn" id="2_1d32q"]
 [ext_resource type="PackedScene" uid="uid://cm5m0bib7iqn1" path="res://Asset/PathCircle.tscn" id="3_88gi2"]
 [ext_resource type="Script" path="res://Script/rotateSprite.gd" id="4_8xegu"]
@@ -20,6 +21,7 @@
 size = Vector2(1982, 1108)
 
 [node name="Level0" type="Node2D"]
+script = ExtResource("1_dpx11")
 
 [node name="Galaxy" type="Sprite2D" parent="."]
 position = Vector2(954, 554)
@@ -104,3 +106,13 @@ texture = ExtResource("14_jlhjn")
 [node name="PseudoUce" type="Sprite2D" parent="Node2D"]
 position = Vector2(236.602, -5.86918)
 texture = ExtResource("15_j02qu")
+
+[node name="Button" type="Button" parent="."]
+z_index = -1
+offset_left = 767.0
+offset_top = 518.0
+offset_right = 1221.0
+offset_bottom = 768.0
+theme_override_colors/font_color = Color(0.920995, 0.920995, 0.920995, 1)
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
