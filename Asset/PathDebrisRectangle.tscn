@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://74u1vfyvtsv"]
+[gd_scene load_steps=5 format=3 uid="uid://74u1vfyvtsv"]
 
 [ext_resource type="Script" path="res://Script/PathDebris.gd" id="1_n3ewf"]
 [ext_resource type="Texture2D" uid="uid://b8xh3ev208eqr" path="res://Texture/RubberDuck_Yellow.png" id="2_pjtkt"]
 [ext_resource type="Texture2D" uid="uid://df4icrfgskimq" path="res://Texture/PoolMat_Blue.png" id="3_0rf4j"]
-[ext_resource type="Script" path="res://Script/rotateSprite.gd" id="3_tgvt2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mp1ta"]
 size = Vector2(16.7173, 39.0071)
@@ -17,9 +16,7 @@ texture = ExtResource("2_pjtkt")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -1)
 texture = ExtResource("3_0rf4j")
-script = ExtResource("3_tgvt2")
-period = 1
-metadata/_edit_pinned_properties_ = [&"period"]
+metadata/_edit_pinned_properties_ = null
 
 [node name="Area2D" type="Area2D" parent="."]
 
