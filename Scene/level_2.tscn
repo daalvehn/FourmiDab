@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dg8cbxhtcumgb" path="res://Asset/fourmi.tscn" id="1_7n2e7"]
 [ext_resource type="PackedScene" uid="uid://cfiwkn58hch6s" path="res://Asset/black_hole.tscn" id="2_p755w"]
-[ext_resource type="PackedScene" uid="uid://74u1vfyvtsv" path="res://Asset/DebrisRectangle.tscn" id="3_hxtrr"]
+[ext_resource type="PackedScene" uid="uid://74u1vfyvtsv" path="res://Asset/PathDebrisRectangle.tscn" id="3_hxtrr"]
 [ext_resource type="Texture2D" uid="uid://df4icrfgskimq" path="res://Texture/PoolMat_Blue.png" id="4_ktwdn"]
 [ext_resource type="PackedScene" uid="uid://becjw3f3b5hwp" path="res://Asset/Debris.tscn" id="5_12tlo"]
 [ext_resource type="Texture2D" uid="uid://d36hlf01t3xgo" path="res://Texture/RubberDuck_Pink.png" id="6_gp5h2"]
@@ -28,6 +28,12 @@ rotation = 0.926674
 scale = Vector2(7.02347, 7.02347)
 texture = ExtResource("4_ktwdn")
 
+[node name="RigidBody2D12" parent="." instance=ExtResource("3_hxtrr")]
+position = Vector2(692, 772)
+rotation = -0.127977
+scale = Vector2(2.02462, 2.02462)
+texture = ExtResource("4_ktwdn")
+
 [node name="RigidBody2D2" parent="." instance=ExtResource("3_hxtrr")]
 position = Vector2(1817, 267)
 rotation = 0.155427
@@ -41,6 +47,12 @@ scale = Vector2(7.02347, 7.02347)
 texture = ExtResource("4_ktwdn")
 
 [node name="RigidBody2D4" parent="." instance=ExtResource("3_hxtrr")]
+position = Vector2(305, 256)
+rotation = 0.774322
+scale = Vector2(7.02347, 7.02347)
+texture = ExtResource("4_ktwdn")
+
+[node name="RigidBody2D11" parent="." instance=ExtResource("3_hxtrr")]
 position = Vector2(305, 256)
 rotation = 0.774322
 scale = Vector2(7.02347, 7.02347)
