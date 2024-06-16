@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bc50syjb17i6m"]
+[gd_scene load_steps=6 format=3 uid="uid://bc50syjb17i6m"]
 
 [ext_resource type="PackedScene" uid="uid://dg8cbxhtcumgb" path="res://Asset/fourmi.tscn" id="1_gpnl7"]
 [ext_resource type="PackedScene" uid="uid://cfiwkn58hch6s" path="res://Asset/black_hole.tscn" id="2_il02p"]
-[ext_resource type="PackedScene" uid="uid://cm5m0bib7iqn1" path="res://Asset/PathCircle.tscn" id="3_xyt5b"]
-[ext_resource type="PackedScene" uid="uid://xdbu1ntd1e35" path="res://Asset/PathDebris.tscn" id="4_s6r74"]
+[ext_resource type="PackedScene" uid="uid://becjw3f3b5hwp" path="res://Asset/Debris.tscn" id="5_fxkae"]
+[ext_resource type="PackedScene" uid="uid://74u1vfyvtsv" path="res://Asset/DebrisRectangle.tscn" id="5_ggvli"]
+[ext_resource type="Texture2D" uid="uid://df4icrfgskimq" path="res://Texture/PoolMat_Blue.png" id="6_pvicg"]
 
 [node name="Level1" type="Node2D"]
 
@@ -11,10 +12,14 @@
 position = Vector2(114, 171)
 
 [node name="BlackHole" parent="." instance=ExtResource("2_il02p")]
-position = Vector2(1702, 680)
+position = Vector2(1723, 514)
 
-[node name="Path2D" parent="." instance=ExtResource("3_xyt5b")]
-position = Vector2(1391, 653)
+[node name="RigidBody2D" parent="." instance=ExtResource("5_ggvli")]
+position = Vector2(568, 82)
+rotation = -0.55896
+scale = Vector2(4.27888, 4.27888)
+texture = ExtResource("6_pvicg")
 
-[node name="Debris" parent="Path2D" instance=ExtResource("4_s6r74")]
-position = Vector2(-100, 0)
+[node name="RigidBody2D2" parent="." instance=ExtResource("5_fxkae")]
+position = Vector2(131, 565)
+scale = Vector2(8.99302, 8.99302)
