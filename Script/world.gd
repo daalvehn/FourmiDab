@@ -29,12 +29,13 @@ func _process(delta):
 	rotate_planets(delta)
 	
 func change_level():
-	print(index)
+	print("index before : ", index_list)
 	if index_list <= level_list.size():
-		var level = level_list[index].instantiate()
-		self.add_child(level)
+		var level = level_list[index_list].instantiate()
+		print("level : ", level_list[index_list])
 		index_list += 1
-		print(index)
+		self.add_child(level)
+		print("index after : ", index_list)
 
 # Function to check input
 func check_input():
