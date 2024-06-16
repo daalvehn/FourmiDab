@@ -24,6 +24,7 @@ position = Vector2(1030, 605)
 position = Vector2(958, 538)
 
 [node name="Ui_level" parent="." instance=ExtResource("5_ncora")]
+z_index = 1
 
 [node name="Inventory" parent="." instance=ExtResource("6_ty2fk")]
 
