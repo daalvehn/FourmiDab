@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dmps6f51enln7" path="res://Asset/ground.tscn" id="1_bjynj"]
 [ext_resource type="Script" path="res://Script/world.gd" id="1_i01pq"]
 [ext_resource type="PackedScene" uid="uid://b0g1wn8waka8v" path="res://Asset/planet.tscn" id="2_g7213"]
-[ext_resource type="PackedScene" uid="uid://bnke4lqc6wh5f" path="res://Asset/stars_emitter.tscn" id="2_rhlf0"]
+[ext_resource type="PackedScene" uid="uid://bhgf0c1v04wgr" path="res://Asset/stars_emitter.tscn" id="2_rhlf0"]
 [ext_resource type="PackedScene" uid="uid://fhtirnvwowsx" path="res://Scene/ui_level.tscn" id="5_ncora"]
 [ext_resource type="PackedScene" uid="uid://cg5juldybpdc4" path="res://Scene/inventory.tscn" id="6_ty2fk"]
 [ext_resource type="Script" path="res://Script/GamingZone.gd" id="7_nckhs"]
@@ -30,6 +30,12 @@ position = Vector2(958, 538)
 
 [node name="GamingZone" type="Area2D" parent="."]
 position = Vector2(859, 375)
+gravity_space_override = 1
+gravity_point = true
+gravity_point_center = Vector2(0, 0)
+gravity_direction = Vector2(0, 0)
+gravity = -1287.31
+linear_damp = 0.0
 script = ExtResource("7_nckhs")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GamingZone"]

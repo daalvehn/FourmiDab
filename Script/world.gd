@@ -36,6 +36,9 @@ func check_input():
 		_on_ui_level_slot_2_pressed()
 		$Ui_level.get_child(0).get_child(1).grab_focus()
 		
+	#if Input.is_action_just_pressed("yeet"):
+		#$Fourmi.apply_impulse(Vector2 (2,2), Vector2(0,0))
+		
 func remove_planet(planet_id):
 	# remove planet from scene tree
 	self.remove_child(planet_list[planet_id])
