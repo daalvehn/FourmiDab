@@ -16,7 +16,6 @@ texture = ExtResource("2_pjtkt")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -1)
 texture = ExtResource("3_0rf4j")
-metadata/_edit_pinned_properties_ = null
 
 [node name="Area2D" type="Area2D" parent="."]
 

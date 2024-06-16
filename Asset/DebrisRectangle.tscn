@@ -20,4 +20,3 @@ one_way_collision_margin = 0.0
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -1)
 texture = ExtResource("3_vafwi")
-metadata/_edit_pinned_properties_ = null
