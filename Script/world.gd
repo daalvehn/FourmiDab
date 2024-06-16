@@ -21,8 +21,8 @@ var previous_level = null
 
 func _ready():
 	change_level()
-	$Ui_level.get_child(0).get_child(0).get_child(2).text = str($Inventory.inventory["PlanetCandy"])
-	$Ui_level.get_child(0).get_child(1).get_child(2).text = str($Inventory.inventory["PlanetLemon"])
+	$Ui_level.get_child(0).get_child(0).get_child(2).text = "E"
+	$Ui_level.get_child(0).get_child(1).get_child(2).text = "R"
 
 func _process(delta):
 	check_input()
