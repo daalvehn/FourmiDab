@@ -15,7 +15,7 @@ var level6 = preload("res://Scene/level_6.tscn")
 var level7 = preload("res://Scene/level_7.tscn")
 var level8 = preload("res://Scene/level_8.tscn")
 var level9 = preload("res://Scene/level_9.tscn")
-var level_list = [level1,level2,level3,level4,level5,level6,level7,level8,level9]
+var level_list = [level1,level2,level3,level5,level9]
 var index_list = 0
 var previous_level = null
 
