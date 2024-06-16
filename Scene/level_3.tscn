@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://wpq5kcqpr8b7"]
+[gd_scene load_steps=6 format=3 uid="uid://wpq5kcqpr8b7"]
 
 [ext_resource type="PackedScene" uid="uid://dg8cbxhtcumgb" path="res://Asset/fourmi.tscn" id="1_cq40q"]
 [ext_resource type="PackedScene" uid="uid://cfiwkn58hch6s" path="res://Asset/black_hole.tscn" id="2_b4m2r"]
 [ext_resource type="PackedScene" uid="uid://cm5m0bib7iqn1" path="res://Asset/PathCircle.tscn" id="3_rimwk"]
 [ext_resource type="PackedScene" uid="uid://xdbu1ntd1e35" path="res://Asset/PathDebris.tscn" id="4_g6b04"]
+[ext_resource type="PackedScene" uid="uid://74u1vfyvtsv" path="res://Asset/DebrisRectangle.tscn" id="5_h7m2s"]
 
 [node name="Level1" type="Node2D"]
 
@@ -13,8 +14,58 @@ position = Vector2(114, 171)
 [node name="BlackHole" parent="." instance=ExtResource("2_b4m2r")]
 position = Vector2(1702, 680)
 
-[node name="Path2D" parent="." instance=ExtResource("3_rimwk")]
-position = Vector2(1391, 653)
+[node name="Path2D2" parent="." instance=ExtResource("3_rimwk")]
+position = Vector2(1579, 410)
 
-[node name="Debris" parent="Path2D" instance=ExtResource("4_g6b04")]
+[node name="Debris" parent="Path2D2" instance=ExtResource("4_g6b04")]
 position = Vector2(-100, 0)
+
+[node name="Path2D4" parent="." instance=ExtResource("3_rimwk")]
+position = Vector2(263, 499)
+
+[node name="Debris" parent="Path2D4" instance=ExtResource("4_g6b04")]
+position = Vector2(-100, 0)
+
+[node name="Path2D6" parent="." instance=ExtResource("3_rimwk")]
+position = Vector2(984, 145)
+
+[node name="Debris" parent="Path2D6" instance=ExtResource("4_g6b04")]
+position = Vector2(-100, 0)
+
+[node name="Path2D7" parent="." instance=ExtResource("3_rimwk")]
+position = Vector2(793, 716)
+
+[node name="Debris" parent="Path2D7" instance=ExtResource("4_g6b04")]
+position = Vector2(-100, 0)
+
+[node name="Path2D3" parent="." instance=ExtResource("3_rimwk")]
+position = Vector2(1474, 888)
+
+[node name="Debris" parent="Path2D3" instance=ExtResource("4_g6b04")]
+position = Vector2(-100, 0)
+
+[node name="Path2D5" parent="." instance=ExtResource("3_rimwk")]
+position = Vector2(2011, 713)
+
+[node name="Debris" parent="Path2D5" instance=ExtResource("4_g6b04")]
+position = Vector2(-100, 0)
+
+[node name="RigidBody2D" parent="." instance=ExtResource("5_h7m2s")]
+position = Vector2(303, 956)
+rotation = -0.996967
+scale = Vector2(6.195, 6.195)
+
+[node name="RigidBody2D2" parent="." instance=ExtResource("5_h7m2s")]
+position = Vector2(1307, 14.0002)
+rotation = -0.0710031
+scale = Vector2(6.195, 6.195)
+
+[node name="RigidBody2D3" parent="." instance=ExtResource("5_h7m2s")]
+position = Vector2(1032, 1061)
+rotation = 0.639492
+scale = Vector2(6.195, 6.195)
+
+[node name="RigidBody2D4" parent="." instance=ExtResource("5_h7m2s")]
+position = Vector2(-30.9999, 60.0001)
+rotation = 0.639492
+scale = Vector2(6.195, 6.195)
