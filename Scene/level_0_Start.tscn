@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://b0xrokerr4tg5"]
+[gd_scene load_steps=17 format=3 uid="uid://b0xrokerr4tg5"]
 
 [ext_resource type="Texture2D" uid="uid://cdhjk5sx31vr6" path="res://Texture/galaxy.png" id="1_2cl62"]
 [ext_resource type="PackedScene" uid="uid://dg8cbxhtcumgb" path="res://Asset/fourmi.tscn" id="1_3kh28"]
@@ -11,6 +11,10 @@
 [ext_resource type="Texture2D" uid="uid://dicg5hntjoeg" path="res://Texture/PlayButton.png" id="7_d88sk"]
 [ext_resource type="Texture2D" uid="uid://bk58c1hmn0wdu" path="res://Texture/PlanetBlue.png" id="10_u30q5"]
 [ext_resource type="Texture2D" uid="uid://dqxaolvnnsq5q" path="res://Texture/PoolMat_Red.png" id="11_q6qer"]
+[ext_resource type="Texture2D" uid="uid://cq2rybflwqvp" path="res://Texture/pseudo_D4rk.png" id="12_wnbbu"]
+[ext_resource type="Texture2D" uid="uid://cgh4ox0v65p30" path="res://Texture/pseudo_givr.png" id="13_12hui"]
+[ext_resource type="Texture2D" uid="uid://boqp2ap0kon72" path="res://Texture/pseudo_manwe.png" id="14_jlhjn"]
+[ext_resource type="Texture2D" uid="uid://372pyxwdrcpo" path="res://Texture/pseudo_uce.png" id="15_j02qu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iifkh"]
 size = Vector2(1982, 1108)
@@ -80,3 +84,23 @@ texture = ExtResource("6_xy75m")
 position = Vector2(991.254, 638.127)
 scale = Vector2(5.05923, 5.05923)
 texture = ExtResource("7_d88sk")
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(972, 992)
+scale = Vector2(2.7261, 2.7261)
+
+[node name="PseudoD4Rk" type="Sprite2D" parent="Node2D"]
+position = Vector2(-179.01, -5.86918)
+texture = ExtResource("12_wnbbu")
+
+[node name="PseudoGivr" type="Sprite2D" parent="Node2D"]
+position = Vector2(-42.1848, -5.86918)
+texture = ExtResource("13_12hui")
+
+[node name="PseudoManwe" type="Sprite2D" parent="Node2D"]
+position = Vector2(82.1686, -5.86918)
+texture = ExtResource("14_jlhjn")
+
+[node name="PseudoUce" type="Sprite2D" parent="Node2D"]
+position = Vector2(236.602, -5.86918)
+texture = ExtResource("15_j02qu")
