@@ -1,0 +1,170 @@
+[gd_scene load_steps=21 format=3 uid="uid://bvma7cei31v5p"]
+
+[ext_resource type="Script" path="res://Script/level_0_Start.gd" id="1_cea0s"]
+[ext_resource type="Texture2D" uid="uid://cdhjk5sx31vr6" path="res://Texture/galaxy.png" id="2_knhwp"]
+[ext_resource type="PackedScene" uid="uid://dg8cbxhtcumgb" path="res://Asset/fourmi.tscn" id="3_u28xa"]
+[ext_resource type="PackedScene" uid="uid://cfiwkn58hch6s" path="res://Asset/black_hole.tscn" id="4_72oij"]
+[ext_resource type="Script" path="res://Script/rotateSprite.gd" id="5_yl00q"]
+[ext_resource type="PackedScene" uid="uid://becjw3f3b5hwp" path="res://Asset/Debris.tscn" id="8_ikfkd"]
+[ext_resource type="Texture2D" uid="uid://bk58c1hmn0wdu" path="res://Texture/PlanetBlue.png" id="9_khnj0"]
+[ext_resource type="Texture2D" uid="uid://cq2rybflwqvp" path="res://Texture/pseudo_D4rk.png" id="12_vfl2w"]
+[ext_resource type="Texture2D" uid="uid://cgh4ox0v65p30" path="res://Texture/pseudo_givr.png" id="13_3pckj"]
+[ext_resource type="Texture2D" uid="uid://b8xh3ev208eqr" path="res://Texture/RubberDuck_Yellow.png" id="13_afd08"]
+[ext_resource type="Texture2D" uid="uid://cf0hdium4u6f" path="res://Texture/RubberDuck_Blue.png" id="13_qivaq"]
+[ext_resource type="Texture2D" uid="uid://ymlasnc4ude4" path="res://Texture/Marmelanete.png" id="14_ahfde"]
+[ext_resource type="Texture2D" uid="uid://boqp2ap0kon72" path="res://Texture/pseudo_manwe.png" id="14_fc32p"]
+[ext_resource type="Texture2D" uid="uid://372pyxwdrcpo" path="res://Texture/pseudo_uce.png" id="15_5hs7i"]
+[ext_resource type="Texture2D" uid="uid://fei8hntw1xfu" path="res://Texture/gg_02.png" id="16_17w3g"]
+[ext_resource type="Texture2D" uid="uid://dicg5hntjoeg" path="res://Texture/PlayButton.png" id="16_omxag"]
+[ext_resource type="Texture2D" uid="uid://bc8365dxgqk2k" path="res://Texture/gg_00.png" id="17_2s34a"]
+[ext_resource type="Texture2D" uid="uid://bsrq4tbw7vlit" path="res://Texture/gg_01.png" id="18_dheih"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iifkh"]
+size = Vector2(1982, 1108)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nbdej"]
+
+[node name="Level0" type="Node2D"]
+script = ExtResource("1_cea0s")
+
+[node name="Galaxy" type="Sprite2D" parent="."]
+position = Vector2(954, 554)
+scale = Vector2(5.22605, 5.22605)
+texture = ExtResource("2_knhwp")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(963, 566)
+gravity_space_override = 3
+gravity_point = true
+gravity_point_center = Vector2(0, 0)
+gravity_direction = Vector2(0, 0)
+gravity = 10.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
+position = Vector2(-10, -12)
+shape = SubResource("RectangleShape2D_iifkh")
+
+[node name="PlanetBlue" type="Sprite2D" parent="."]
+position = Vector2(1756, 158)
+scale = Vector2(6.39055, 6.39055)
+texture = ExtResource("9_khnj0")
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(1025, 941)
+scale = Vector2(2.7261, 2.7261)
+
+[node name="PseudoD4Rk" type="Sprite2D" parent="Node2D"]
+position = Vector2(-179.01, -5.86918)
+texture = ExtResource("12_vfl2w")
+
+[node name="PseudoGivr" type="Sprite2D" parent="Node2D"]
+position = Vector2(-42.1848, -5.86918)
+texture = ExtResource("13_3pckj")
+
+[node name="PseudoManwe" type="Sprite2D" parent="Node2D"]
+position = Vector2(82.1686, -5.86918)
+texture = ExtResource("14_fc32p")
+
+[node name="PseudoUce" type="Sprite2D" parent="Node2D"]
+position = Vector2(236.602, -5.86918)
+texture = ExtResource("15_5hs7i")
+
+[node name="Button" type="Button" parent="."]
+visible = false
+top_level = true
+offset_left = 700.0
+offset_top = 500.0
+offset_right = 1154.0
+offset_bottom = 750.0
+theme_override_styles/hover = SubResource("StyleBoxTexture_nbdej")
+icon = ExtResource("16_omxag")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Fourmiz" parent="." instance=ExtResource("3_u28xa")]
+position = Vector2(545, 375)
+
+[node name="Sprite2D" parent="Fourmiz" index="0"]
+scale = Vector2(5, 5)
+script = ExtResource("5_yl00q")
+period = 5
+
+[node name="CollisionShape2D" parent="Fourmiz" index="1"]
+visible = true
+scale = Vector2(5, 5)
+
+[node name="RigidBody2D" parent="." instance=ExtResource("8_ikfkd")]
+position = Vector2(1795, 230)
+
+[node name="CollisionShape2D" parent="RigidBody2D" index="0"]
+scale = Vector2(100, 100)
+
+[node name="Sprite2D" parent="RigidBody2D" index="1"]
+position = Vector2(0, -3)
+scale = Vector2(3, 3)
+texture = ExtResource("13_afd08")
+period = -7
+
+[node name="CollisionShape2D2" parent="RigidBody2D/Area2D" index="0"]
+scale = Vector2(60, 60)
+
+[node name="RigidBody2D2" parent="." instance=ExtResource("8_ikfkd")]
+position = Vector2(1487, 766)
+rotation = -1.84283
+
+[node name="CollisionShape2D" parent="RigidBody2D2" index="0"]
+scale = Vector2(100, 100)
+
+[node name="Sprite2D" parent="RigidBody2D2" index="1"]
+position = Vector2(0, -3)
+scale = Vector2(3, 3)
+texture = ExtResource("13_qivaq")
+period = -5
+
+[node name="CollisionShape2D2" parent="RigidBody2D2/Area2D" index="0"]
+scale = Vector2(60, 60)
+
+[node name="BlackHole" parent="." instance=ExtResource("4_72oij")]
+position = Vector2(1035, 468)
+
+[node name="Sprite2D" parent="BlackHole" index="0"]
+scale = Vector2(2.72286, 2.72286)
+texture = ExtResource("14_ahfde")
+
+[node name="Area2D" parent="BlackHole/Sprite2D" index="0"]
+scale = Vector2(1.45635, 1.45635)
+gravity_space_override = 3
+gravity_point = true
+gravity_point_center = Vector2(0, 0)
+gravity_direction = Vector2(0, 0)
+gravity = 100.0
+
+[node name="CollisionShape2D" parent="BlackHole/Sprite2D/Area2D" index="0"]
+scale = Vector2(2.48994, 2.48994)
+
+[node name="AttractionZone" parent="BlackHole" index="1"]
+gravity = -200.0
+
+[node name="Gg02" type="Sprite2D" parent="."]
+position = Vector2(990, 708)
+scale = Vector2(7.82588, 7.82588)
+texture = ExtResource("16_17w3g")
+
+[node name="Gg00" type="Sprite2D" parent="."]
+position = Vector2(1009, 109)
+scale = Vector2(2.95944, 2.95944)
+texture = ExtResource("17_2s34a")
+
+[node name="Gg01" type="Sprite2D" parent="."]
+position = Vector2(981, 221)
+scale = Vector2(5.36416, 5.36416)
+texture = ExtResource("18_dheih")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+
+[editable path="Fourmiz"]
+[editable path="RigidBody2D"]
+[editable path="RigidBody2D2"]
+[editable path="BlackHole"]
