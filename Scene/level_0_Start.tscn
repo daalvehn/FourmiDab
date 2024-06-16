@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://cgh4ox0v65p30" path="res://Texture/pseudo_givr.png" id="13_12hui"]
 [ext_resource type="Texture2D" uid="uid://boqp2ap0kon72" path="res://Texture/pseudo_manwe.png" id="14_jlhjn"]
 [ext_resource type="Texture2D" uid="uid://372pyxwdrcpo" path="res://Texture/pseudo_uce.png" id="15_j02qu"]
-[ext_resource type="PackedScene" uid="uid://74u1vfyvtsv" path="res://Asset/DebrisRectangle.tscn" id="17_godbe"]
+[ext_resource type="PackedScene" uid="uid://74u1vfyvtsv" path="res://Asset/PathDebrisRectangle.tscn" id="17_godbe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iifkh"]
 size = Vector2(1982, 1108)
