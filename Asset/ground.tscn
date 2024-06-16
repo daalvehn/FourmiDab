@@ -1,9 +1,10 @@
 [gd_scene load_steps=2 format=3 uid="uid://dmps6f51enln7"]
 
-[ext_resource type="Texture2D" uid="uid://d4g4uw4uhk3mo" path="res://Texture/SpaceBackground.png" id="1_7byq3"]
+[ext_resource type="Texture2D" uid="uid://cdhjk5sx31vr6" path="res://Texture/galaxy.png" id="1_nn0r8"]
 
 [node name="Ground" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_7byq3")
+scale = Vector2(5, 5)
+texture = ExtResource("1_nn0r8")
 centered = false
