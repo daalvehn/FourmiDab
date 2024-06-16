@@ -1,0 +1,82 @@
+[gd_scene load_steps=13 format=3 uid="uid://b0xrokerr4tg5"]
+
+[ext_resource type="Texture2D" uid="uid://cdhjk5sx31vr6" path="res://Texture/galaxy.png" id="1_2cl62"]
+[ext_resource type="PackedScene" uid="uid://dg8cbxhtcumgb" path="res://Asset/fourmi.tscn" id="1_3kh28"]
+[ext_resource type="PackedScene" uid="uid://cfiwkn58hch6s" path="res://Asset/black_hole.tscn" id="2_1d32q"]
+[ext_resource type="PackedScene" uid="uid://cm5m0bib7iqn1" path="res://Asset/PathCircle.tscn" id="3_88gi2"]
+[ext_resource type="Script" path="res://Script/rotateSprite.gd" id="4_8xegu"]
+[ext_resource type="PackedScene" uid="uid://xdbu1ntd1e35" path="res://Asset/PathDebris.tscn" id="4_ldyjo"]
+[ext_resource type="PackedScene" uid="uid://becjw3f3b5hwp" path="res://Asset/Debris.tscn" id="5_bsxh7"]
+[ext_resource type="Texture2D" uid="uid://bwsbpjg41lj6k" path="res://Texture/GameTitle.png" id="6_xy75m"]
+[ext_resource type="Texture2D" uid="uid://dicg5hntjoeg" path="res://Texture/PlayButton.png" id="7_d88sk"]
+[ext_resource type="Texture2D" uid="uid://bk58c1hmn0wdu" path="res://Texture/PlanetBlue.png" id="10_u30q5"]
+[ext_resource type="Texture2D" uid="uid://dqxaolvnnsq5q" path="res://Texture/PoolMat_Red.png" id="11_q6qer"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iifkh"]
+size = Vector2(1982, 1108)
+
+[node name="Level0" type="Node2D"]
+
+[node name="Galaxy" type="Sprite2D" parent="."]
+position = Vector2(954, 554)
+scale = Vector2(5.22605, 5.22605)
+texture = ExtResource("1_2cl62")
+
+[node name="Fourmi" parent="." instance=ExtResource("1_3kh28")]
+position = Vector2(114, 171)
+script = null
+
+[node name="BlackHole" parent="." instance=ExtResource("2_1d32q")]
+position = Vector2(1702, 680)
+scale = Vector2(0.993377, 1.0387)
+script = ExtResource("4_8xegu")
+period = -10
+
+[node name="Path2D" parent="." instance=ExtResource("3_88gi2")]
+position = Vector2(1501, 307)
+
+[node name="Debris" parent="Path2D" instance=ExtResource("4_ldyjo")]
+position = Vector2(-100, 0)
+
+[node name="RigidBody2D" parent="." instance=ExtResource("5_bsxh7")]
+position = Vector2(1347, 728)
+script = null
+
+[node name="RigidBody2D2" parent="." instance=ExtResource("5_bsxh7")]
+position = Vector2(403, 800)
+script = null
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(963, 566)
+gravity_space_override = 3
+gravity_point = true
+gravity_point_center = Vector2(0, 0)
+gravity_direction = Vector2(0, 0)
+gravity = 10.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-10, -12)
+shape = SubResource("RectangleShape2D_iifkh")
+
+[node name="PlanetBlue" type="Sprite2D" parent="."]
+position = Vector2(136, 935)
+scale = Vector2(6.39055, 6.39055)
+texture = ExtResource("10_u30q5")
+
+[node name="PoolMatRed" type="Sprite2D" parent="."]
+position = Vector2(1078, 151)
+rotation = 1.17718
+scale = Vector2(5.18581, 5.18581)
+texture = ExtResource("11_q6qer")
+script = ExtResource("4_8xegu")
+period = -12
+
+[node name="GameTitle" type="Sprite2D" parent="."]
+position = Vector2(964.254, 281.127)
+scale = Vector2(10.129, 10.129)
+texture = ExtResource("6_xy75m")
+
+[node name="PlayButton" type="Sprite2D" parent="."]
+position = Vector2(991.254, 638.127)
+scale = Vector2(5.05923, 5.05923)
+texture = ExtResource("7_d88sk")
