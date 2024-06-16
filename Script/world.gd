@@ -35,16 +35,17 @@ func change_level():
 		
 		# remove the previous loaded level
 		if previous_level != null:
-			print("previous level removed " + str(index_list))
 			self.remove_child(previous_level)
+			
+			# reset planet list
+			#print("planet list : ", planet_list)
+			#for planet in planet_list:
+				#remove_planet(planet.id)	
+			#print("planet list : ", planet_list)
 		
 		# load the next level
 		var level = level_list[index_list].instantiate()
-		print("level loaded " + str(index_list))
 		self.add_child(level)
-		
-		# reset planet list
-		planet_list = []
 		
 		# prepare the removing for the next level
 		previous_level = level
