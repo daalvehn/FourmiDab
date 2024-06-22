@@ -15,4 +15,7 @@ func _process(delta):
 
 
 func _on_area_2d_body_entered(body):
-	player_in.emit()
+	if body.name == "Fourmi":
+		player_in.emit()
+	else:
+		self.get_parent().remove_child(body)
