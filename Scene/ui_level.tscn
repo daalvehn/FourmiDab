@@ -51,7 +51,7 @@ offset_bottom = 55.6634
 scale = Vector2(0.197712, 0.301138)
 theme_override_colors/font_color = Color(0.823529, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
-text = "3"
+text = "1"
 horizontal_alignment = 1
 
 [node name="slot_2" parent="MenuBar" instance=ExtResource("2_sgsil")]
@@ -83,7 +83,7 @@ offset_bottom = 55.9473
 scale = Vector2(0.198624, 0.312963)
 theme_override_colors/font_color = Color(0.823529, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
-text = "3"
+text = "1"
 horizontal_alignment = 1
 
 [connection signal="pressed" from="MenuBar/slot_1" to="." method="_on_slot_1_pressed"]

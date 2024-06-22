@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://becjw3f3b5hwp"]
+[gd_scene load_steps=6 format=3 uid="uid://becjw3f3b5hwp"]
 
 [ext_resource type="Script" path="res://Script/PathDebris.gd" id="1_ifg5t"]
 [ext_resource type="Texture2D" uid="uid://d36hlf01t3xgo" path="res://Texture/RubberDuck_Pink.png" id="2_mrtsw"]
@@ -6,6 +6,9 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_onndp"]
 radius = 1.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4fjls"]
+height = 34.0
 
 [node name="Canard" type="RigidBody2D"]
 position = Vector2(0, -1)
@@ -15,7 +18,7 @@ script = ExtResource("1_ifg5t")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-2.98023e-08, -1)
-scale = Vector2(1.974, 1.974)
+scale = Vector2(0.1, 0.1)
 shape = SubResource("CircleShape2D_onndp")
 one_way_collision_margin = 0.0
 
@@ -29,9 +32,10 @@ metadata/_edit_pinned_properties_ = [&"period"]
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-2.98023e-08, -1)
-scale = Vector2(1.974, 1.974)
-shape = SubResource("CircleShape2D_onndp")
+position = Vector2(-4, -1)
+rotation = -0.501926
+scale = Vector2(1.1, 1.1)
+shape = SubResource("CapsuleShape2D_4fjls")
 one_way_collision_margin = 0.0
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
