@@ -1,11 +1,6 @@
 extends Node2D
 @export	var rotation_period = 1
 @export var periodInSecond : float = 1
-@export var texture: Texture
-
-func _ready():
-	if texture:
-		$Sprite2D.texture = texture
 
 func _process(delta):
 	var degrees_per_second = 360.0
