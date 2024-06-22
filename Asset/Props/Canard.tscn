@@ -1,13 +1,23 @@
-[gd_scene load_steps=5 format=3 uid="uid://becjw3f3b5hwp"]
+[gd_scene load_steps=8 format=3 uid="uid://becjw3f3b5hwp"]
 
 [ext_resource type="Script" path="res://Script/PathDebris.gd" id="1_ifg5t"]
 [ext_resource type="Texture2D" uid="uid://d36hlf01t3xgo" path="res://Texture/RubberDuck_Pink.png" id="2_mrtsw"]
+[ext_resource type="Script" path="res://Asset/Gameplay/TrailHandler.gd" id="3_wkbhl"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_onndp"]
 radius = 1.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4fjls"]
 height = 34.0
+
+[sub_resource type="Curve" id="Curve_4bhur"]
+min_value = 0.5
+max_value = 3.0
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1e-05, 1.0716), 0.292911, 0.292911, 0, 0, Vector2(1, 3), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_up8ct"]
+colors = PackedColorArray(0.45152, 0.1088, 0.68, 0, 0, 0.55, 1, 0.490196)
 
 [node name="Canard" type="RigidBody2D"]
 position = Vector2(0, -1)
@@ -33,5 +43,13 @@ rotation = -0.501926
 scale = Vector2(1.1, 1.1)
 shape = SubResource("CapsuleShape2D_4fjls")
 one_way_collision_margin = 0.0
+
+[node name="Line2D" type="Line2D" parent="."]
+show_behind_parent = true
+width_curve = SubResource("Curve_4bhur")
+gradient = SubResource("Gradient_up8ct")
+end_cap_mode = 2
+script = ExtResource("3_wkbhl")
+updateDistance = 10
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
