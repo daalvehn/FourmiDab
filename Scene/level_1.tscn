@@ -2,11 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://dg8cbxhtcumgb" path="res://Asset/Gameplay/fourmi.tscn" id="1_gpnl7"]
 [ext_resource type="PackedScene" uid="uid://cfiwkn58hch6s" path="res://Asset/Gameplay/black_hole.tscn" id="2_il02p"]
-[ext_resource type="PackedScene" uid="uid://becjw3f3b5hwp" path="res://Asset/Debris/DebrisCanard.tscn" id="5_fxkae"]
+[ext_resource type="PackedScene" uid="uid://becjw3f3b5hwp" path="res://Asset/Props/Canard.tscn" id="5_fxkae"]
 [ext_resource type="Texture2D" uid="uid://df4icrfgskimq" path="res://Texture/PoolMat_Blue.png" id="6_pvicg"]
 [ext_resource type="Texture2D" uid="uid://bk58c1hmn0wdu" path="res://Texture/PlanetBlue.png" id="6_q00sb"]
 [ext_resource type="Texture2D" uid="uid://dqxaolvnnsq5q" path="res://Texture/PoolMat_Red.png" id="7_gixov"]
-[ext_resource type="PackedScene" uid="uid://74u1vfyvtsv" path="res://Asset/Debris/PathDebrisMatelas.tscn" id="8_vyj0k"]
+[ext_resource type="PackedScene" uid="uid://74u1vfyvtsv" path="res://Asset/Props/PathMatelas.tscn" id="8_vyj0k"]
 [ext_resource type="Texture2D" uid="uid://b8xh3ev208eqr" path="res://Texture/RubberDuck_Yellow.png" id="9_d0aw2"]
 
 [node name="Level1" type="Node2D"]

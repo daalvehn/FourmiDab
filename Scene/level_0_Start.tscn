@@ -4,10 +4,10 @@
 [ext_resource type="PackedScene" uid="uid://dg8cbxhtcumgb" path="res://Asset/Gameplay/fourmi.tscn" id="1_3kh28"]
 [ext_resource type="Script" path="res://Script/level_0_Start.gd" id="1_dpx11"]
 [ext_resource type="PackedScene" uid="uid://cfiwkn58hch6s" path="res://Asset/Gameplay/black_hole.tscn" id="2_1d32q"]
-[ext_resource type="PackedScene" uid="uid://cm5m0bib7iqn1" path="res://Asset/Debris/Path2DCircle.tscn" id="3_88gi2"]
+[ext_resource type="PackedScene" uid="uid://cm5m0bib7iqn1" path="res://Asset/Props/Path2DCircle.tscn" id="3_88gi2"]
 [ext_resource type="Script" path="res://Script/rotateSprite.gd" id="4_8xegu"]
-[ext_resource type="PackedScene" uid="uid://xdbu1ntd1e35" path="res://Asset/Debris/PathDebrisCanard.tscn" id="4_ldyjo"]
-[ext_resource type="PackedScene" uid="uid://becjw3f3b5hwp" path="res://Asset/Debris/DebrisCanard.tscn" id="5_bsxh7"]
+[ext_resource type="PackedScene" uid="uid://xdbu1ntd1e35" path="res://Asset/Props/PathCanard.tscn" id="4_ldyjo"]
+[ext_resource type="PackedScene" uid="uid://becjw3f3b5hwp" path="res://Asset/Props/Canard.tscn" id="5_bsxh7"]
 [ext_resource type="Texture2D" uid="uid://bwsbpjg41lj6k" path="res://Texture/GameTitle.png" id="6_xy75m"]
 [ext_resource type="Texture2D" uid="uid://dicg5hntjoeg" path="res://Texture/PlayButton.png" id="7_d88sk"]
 [ext_resource type="Texture2D" uid="uid://bk58c1hmn0wdu" path="res://Texture/PlanetBlue.png" id="10_u30q5"]
@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://cgh4ox0v65p30" path="res://Texture/pseudo_givr.png" id="13_12hui"]
 [ext_resource type="Texture2D" uid="uid://boqp2ap0kon72" path="res://Texture/pseudo_manwe.png" id="14_jlhjn"]
 [ext_resource type="Texture2D" uid="uid://372pyxwdrcpo" path="res://Texture/pseudo_uce.png" id="15_j02qu"]
-[ext_resource type="PackedScene" uid="uid://74u1vfyvtsv" path="res://Asset/Debris/PathDebrisMatelas.tscn" id="17_godbe"]
+[ext_resource type="PackedScene" uid="uid://74u1vfyvtsv" path="res://Asset/Props/PathMatelas.tscn" id="17_godbe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iifkh"]
 size = Vector2(1982, 1108)
