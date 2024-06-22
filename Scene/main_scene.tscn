@@ -1,32 +1,32 @@
 [gd_scene load_steps=9 format=3 uid="uid://uj43l33ax3vm"]
 
-[ext_resource type="PackedScene" uid="uid://dmps6f51enln7" path="res://Asset/ground.tscn" id="1_bjynj"]
-[ext_resource type="Script" path="res://Script/world.gd" id="1_i01pq"]
-[ext_resource type="PackedScene" uid="uid://b0g1wn8waka8v" path="res://Asset/Gameplay/planet.tscn" id="2_g7213"]
-[ext_resource type="PackedScene" uid="uid://bhgf0c1v04wgr" path="res://Asset/stars_emitter.tscn" id="2_rhlf0"]
-[ext_resource type="PackedScene" uid="uid://fhtirnvwowsx" path="res://Scene/ui_level.tscn" id="5_ncora"]
-[ext_resource type="PackedScene" uid="uid://cg5juldybpdc4" path="res://Scene/inventory.tscn" id="6_ty2fk"]
-[ext_resource type="Script" path="res://Script/GamingZone.gd" id="7_nckhs"]
+[ext_resource type="Script" path="res://Script/main_scene.gd" id="1_tbe1w"]
+[ext_resource type="PackedScene" uid="uid://b0g1wn8waka8v" path="res://Asset/Gameplay/planet.tscn" id="2_ah4tx"]
+[ext_resource type="PackedScene" uid="uid://dmps6f51enln7" path="res://Asset/ground.tscn" id="3_ir4n7"]
+[ext_resource type="PackedScene" uid="uid://bhgf0c1v04wgr" path="res://Asset/stars_emitter.tscn" id="4_8eolo"]
+[ext_resource type="PackedScene" uid="uid://fhtirnvwowsx" path="res://Scene/ui_level.tscn" id="5_7itxn"]
+[ext_resource type="PackedScene" uid="uid://cg5juldybpdc4" path="res://Scene/inventory.tscn" id="6_i48no"]
+[ext_resource type="Script" path="res://Script/GamingZone.gd" id="7_qpoio"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h0jfd"]
 size = Vector2(1920, 1080)
 
 [node name="Current_level" type="Node2D"]
-script = ExtResource("1_i01pq")
-planet_scene = ExtResource("2_g7213")
+script = ExtResource("1_tbe1w")
+planet_scene = ExtResource("2_ah4tx")
 
-[node name="Ground" parent="." instance=ExtResource("1_bjynj")]
+[node name="Ground" parent="." instance=ExtResource("3_ir4n7")]
 
-[node name="StarsEmitter" parent="." instance=ExtResource("2_rhlf0")]
+[node name="StarsEmitter" parent="." instance=ExtResource("4_8eolo")]
 position = Vector2(1030, 605)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
 
-[node name="Ui_level" parent="." instance=ExtResource("5_ncora")]
+[node name="Ui_level" parent="." instance=ExtResource("5_7itxn")]
 z_index = 1
 
-[node name="Inventory" parent="." instance=ExtResource("6_ty2fk")]
+[node name="Inventory" parent="." instance=ExtResource("6_i48no")]
 
 [node name="GamingZone" type="Area2D" parent="."]
 position = Vector2(859, 375)
@@ -34,7 +34,7 @@ gravity_space_override = 3
 gravity_point_center = Vector2(0, 0)
 gravity_direction = Vector2(0, 0)
 linear_damp = 0.0
-script = ExtResource("7_nckhs")
+script = ExtResource("7_qpoio")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GamingZone"]
 position = Vector2(101, 165)
