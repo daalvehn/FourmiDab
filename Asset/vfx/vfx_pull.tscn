@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://cyr1freycuyy2"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_a8355"]
+blend_mode = 1
+
+[sub_resource type="Curve" id="Curve_e01de"]
+min_value = 1.0
+max_value = 2.0
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1e-05, 1), 0.0, 0.0, 0, 0, Vector2(0.99999, 2), 0.0, 0.0, 0, 0, Vector2(1, 4), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="Curve" id="Curve_mrpfg"]
+min_value = 0.5
+max_value = 2.0
+_data = [Vector2(0, 0.5), 0.0, 0.0, 0, 0, Vector2(0.99998, 2), 0.0, 0.0, 0, 0, Vector2(0.99999, 4), 0.0, 0.0, 0, 0, Vector2(1, 4), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="Gradient" id="Gradient_6yppv"]
+offsets = PackedFloat32Array(0, 0.626126, 0.851351, 1)
+colors = PackedColorArray(0.266667, 0.207843, 0.611765, 0, 0.671333, 0, 0.76, 1, 0.116667, 1, 0, 1, 1, 1, 1, 0)
+
+[node name="VfxPull" type="Node2D"]
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+material = SubResource("CanvasItemMaterial_a8355")
+amount = 20
+emission_shape = 2
+emission_sphere_radius = 128.0
+particle_flag_align_y = true
+direction = Vector2(0, 0)
+gravity = Vector2(0, 0)
+radial_accel_min = -100.0
+radial_accel_max = -100.0
+scale_amount_min = 2.0
+scale_amount_max = 3.0
+scale_amount_curve = SubResource("Curve_e01de")
+split_scale = true
+scale_curve_x = null
+scale_curve_y = SubResource("Curve_mrpfg")
+color_ramp = SubResource("Gradient_6yppv")
