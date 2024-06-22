@@ -120,6 +120,5 @@ expand_icon = true
 [node name="RigidBody2D3" parent="." instance=ExtResource("17_godbe")]
 position = Vector2(282, 672)
 scale = Vector2(1.79688, 1.79688)
-script = null
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
