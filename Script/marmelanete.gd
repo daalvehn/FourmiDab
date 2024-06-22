@@ -10,4 +10,4 @@ func _process(delta):
 
 func _on_area_2d_body_entered(body):
 	if body.name == "Fourmi":
-		get_tree().change_scene_to_file("res://Scene/level_gg.tscn")
+		self.get_parent().get_tree().change_scene_to_file("res://Scene/level_gg.tscn")

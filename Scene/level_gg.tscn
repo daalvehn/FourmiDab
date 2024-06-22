@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://cgh4ox0v65p30" path="res://Texture/pseudo_givr.png" id="13_3pckj"]
 [ext_resource type="Texture2D" uid="uid://b8xh3ev208eqr" path="res://Texture/RubberDuck_Yellow.png" id="13_afd08"]
 [ext_resource type="Texture2D" uid="uid://cf0hdium4u6f" path="res://Texture/RubberDuck_Blue.png" id="13_qivaq"]
-[ext_resource type="Texture2D" uid="uid://ymlasnc4ude4" path="res://Texture/Marmelanete.png" id="14_ahfde"]
+[ext_resource type="Texture2D" uid="uid://6tka2daii64n" path="res://Texture/Marmelanete.png" id="14_ahfde"]
 [ext_resource type="Texture2D" uid="uid://boqp2ap0kon72" path="res://Texture/pseudo_manwe.png" id="14_fc32p"]
 [ext_resource type="Texture2D" uid="uid://372pyxwdrcpo" path="res://Texture/pseudo_uce.png" id="15_5hs7i"]
 [ext_resource type="Texture2D" uid="uid://fei8hntw1xfu" path="res://Texture/gg_02.png" id="16_17w3g"]
