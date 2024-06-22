@@ -8,7 +8,6 @@
 rotates = false
 script = ExtResource("1_w6tur")
 periodInSecond = 10.0
-texture = ExtResource("2_p4r5b")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_p4r5b")
