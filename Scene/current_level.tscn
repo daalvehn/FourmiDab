@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://b0g1wn8waka8v" path="res://Asset/planet.tscn" id="2_g7213"]
 [ext_resource type="PackedScene" uid="uid://bhgf0c1v04wgr" path="res://Asset/stars_emitter.tscn" id="2_rhlf0"]
 [ext_resource type="PackedScene" uid="uid://fhtirnvwowsx" path="res://Scene/ui_level.tscn" id="5_ncora"]
-[ext_resource type="PackedScene" path="res://Scene/inventory.tscn" id="6_ty2fk"]
+[ext_resource type="PackedScene" uid="uid://cg5juldybpdc4" path="res://Scene/inventory.tscn" id="6_ty2fk"]
 [ext_resource type="Script" path="res://Script/GamingZone.gd" id="7_nckhs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h0jfd"]
@@ -21,7 +21,7 @@ planet_scene = ExtResource("2_g7213")
 position = Vector2(1030, 605)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(958, 538)
+anchor_mode = 0
 
 [node name="Ui_level" parent="." instance=ExtResource("5_ncora")]
 z_index = 1
