@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" path="res://Script/level_0_Start.gd" id="1_cea0s"]
 [ext_resource type="Texture2D" uid="uid://cdhjk5sx31vr6" path="res://Texture/galaxy.png" id="2_knhwp"]
-[ext_resource type="PackedScene" uid="uid://dg8cbxhtcumgb" path="res://Asset/fourmi.tscn" id="3_u28xa"]
-[ext_resource type="PackedScene" uid="uid://cfiwkn58hch6s" path="res://Asset/black_hole.tscn" id="4_72oij"]
+[ext_resource type="PackedScene" uid="uid://dg8cbxhtcumgb" path="res://Asset/Gameplay/fourmi.tscn" id="3_u28xa"]
+[ext_resource type="PackedScene" uid="uid://cfiwkn58hch6s" path="res://Asset/Gameplay/black_hole.tscn" id="4_72oij"]
 [ext_resource type="Script" path="res://Script/rotateSprite.gd" id="5_yl00q"]
-[ext_resource type="PackedScene" uid="uid://becjw3f3b5hwp" path="res://Asset/Debris.tscn" id="8_ikfkd"]
+[ext_resource type="PackedScene" uid="uid://becjw3f3b5hwp" path="res://Asset/Debris/DebrisCanard.tscn" id="8_ikfkd"]
 [ext_resource type="Texture2D" uid="uid://bk58c1hmn0wdu" path="res://Texture/PlanetBlue.png" id="9_khnj0"]
 [ext_resource type="Texture2D" uid="uid://cq2rybflwqvp" path="res://Texture/pseudo_D4rk.png" id="12_vfl2w"]
 [ext_resource type="Texture2D" uid="uid://cgh4ox0v65p30" path="res://Texture/pseudo_givr.png" id="13_3pckj"]

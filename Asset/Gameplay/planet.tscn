@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://b0g1wn8waka8v"]
 
-[ext_resource type="Script" path="res://Script/planet.gd" id="1_snckh"]
-[ext_resource type="Script" path="res://Script/DrawCircle.gd" id="2_4um7m"]
+[ext_resource type="Script" path="res://Script/planet.gd" id="1_eb5fr"]
+[ext_resource type="Script" path="res://Script/DrawCircle.gd" id="2_hpnia"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vlp2e"]
 radius = 21.0
@@ -10,7 +10,7 @@ radius = 21.0
 radius = 130.0
 
 [node name="Planet" type="StaticBody2D"]
-script = ExtResource("1_snckh")
+script = ExtResource("1_eb5fr")
 
 [node name="CollisionShape1" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_vlp2e")
@@ -29,7 +29,7 @@ gravity = 500.0
 shape = SubResource("CircleShape2D_2fjha")
 
 [node name="DrawCircle" type="Node2D" parent="."]
-script = ExtResource("2_4um7m")
+script = ExtResource("2_hpnia")
 
 [connection signal="body_entered" from="PlanetArea" to="." method="_on_planet_area_body_entered"]
 [connection signal="body_exited" from="PlanetArea" to="." method="_on_planet_area_body_exited"]
