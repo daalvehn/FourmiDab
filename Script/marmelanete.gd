@@ -14,3 +14,7 @@ func _on_area_2d_body_entered(body):
 	# If Fourmi enter in the marmelanete, load the end scene, you won the game ! GG
 	if body.name == "Fourmi":
 		self.get_parent().get_tree().change_scene_to_file("res://Scene/level_gg.tscn")
+	# If Canard enter in the marmelanete, load the alternate end scene, you wasn't supposed to do that !
+	elif body.name == "Canard":
+		#self.get_parent().get_tree().change_scene_to_file("res://Scene/level_gg.tscn")
+		pass
