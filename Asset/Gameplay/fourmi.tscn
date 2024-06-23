@@ -36,4 +36,5 @@ gradient = SubResource("Gradient_brgu2")
 end_cap_mode = 2
 script = ExtResource("3_b7d50")
 length = 30
-updateDistance = 10
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
