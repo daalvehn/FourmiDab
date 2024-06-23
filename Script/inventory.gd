@@ -1,6 +1,5 @@
 extends Node2D
 
-# extend with other slot if needed
 var inventory = {
 					"PlanetCandy" : 0,
 					"PlanetLemon" : 0}

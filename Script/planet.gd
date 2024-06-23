@@ -72,8 +72,8 @@ func _on_planet_area_input_event(_viewport, event, _shape_idx):
 	if mouse_in_area and event.is_pressed() and event.button_index == MOUSE_BUTTON_RIGHT:
 		planet_right_clicked.emit(self.id)
 
-func _on_planet_area_body_entered(body):
+func _on_planet_area_body_entered(_body):
 	player_in.emit(true, self.type)
 
-func _on_planet_area_body_exited(body):
+func _on_planet_area_body_exited(_body):
 	player_in.emit(false, self.type)
